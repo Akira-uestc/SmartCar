@@ -1,51 +1,51 @@
 /*********************************************************************************************************************
-* TC264 Opensourec Library ¼´£¨TC264 ¿ªÔ´¿â£©ÊÇÒ»¸ö»ùÓÚ¹Ù·½ SDK ½Ó¿ÚµÄµÚÈı·½¿ªÔ´¿â
-* Copyright (c) 2022 SEEKFREE Öğ·É¿Æ¼¼
+* TC264 Opensourec Library å³ï¼ˆTC264 å¼€æºåº“ï¼‰æ˜¯ä¸€ä¸ªåŸºäºå®˜æ–¹ SDK æ¥å£çš„ç¬¬ä¸‰æ–¹å¼€æºåº“
+* Copyright (c) 2022 SEEKFREE é€é£ç§‘æŠ€
 *
-* ±¾ÎÄ¼şÊÇ TC264 ¿ªÔ´¿âµÄÒ»²¿·Ö
+* æœ¬æ–‡ä»¶æ˜¯ TC264 å¼€æºåº“çš„ä¸€éƒ¨åˆ†
 *
-* TC264 ¿ªÔ´¿â ÊÇÃâ·ÑÈí¼ş
-* Äú¿ÉÒÔ¸ù¾İ×ÔÓÉÈí¼ş»ù½ğ»á·¢²¼µÄ GPL£¨GNU General Public License£¬¼´ GNUÍ¨ÓÃ¹«¹²Ğí¿ÉÖ¤£©µÄÌõ¿î
-* ¼´ GPL µÄµÚ3°æ£¨¼´ GPL3.0£©»ò£¨ÄúÑ¡ÔñµÄ£©ÈÎºÎºóÀ´µÄ°æ±¾£¬ÖØĞÂ·¢²¼ºÍ/»òĞŞ¸ÄËü
+* TC264 å¼€æºåº“ æ˜¯å…è´¹è½¯ä»¶
+* æ‚¨å¯ä»¥æ ¹æ®è‡ªç”±è½¯ä»¶åŸºé‡‘ä¼šå‘å¸ƒçš„ GPLï¼ˆGNU General Public Licenseï¼Œå³ GNUé€šç”¨å…¬å…±è®¸å¯è¯ï¼‰çš„æ¡æ¬¾
+* å³ GPL çš„ç¬¬3ç‰ˆï¼ˆå³ GPL3.0ï¼‰æˆ–ï¼ˆæ‚¨é€‰æ‹©çš„ï¼‰ä»»ä½•åæ¥çš„ç‰ˆæœ¬ï¼Œé‡æ–°å‘å¸ƒå’Œ/æˆ–ä¿®æ”¹å®ƒ
 *
-* ±¾¿ªÔ´¿âµÄ·¢²¼ÊÇÏ£ÍûËüÄÜ·¢»Ó×÷ÓÃ£¬µ«²¢Î´¶ÔÆä×÷ÈÎºÎµÄ±£Ö¤
-* ÉõÖÁÃ»ÓĞÒşº¬µÄÊÊÏúĞÔ»òÊÊºÏÌØ¶¨ÓÃÍ¾µÄ±£Ö¤
-* ¸ü¶àÏ¸½ÚÇë²Î¼û GPL
+* æœ¬å¼€æºåº“çš„å‘å¸ƒæ˜¯å¸Œæœ›å®ƒèƒ½å‘æŒ¥ä½œç”¨ï¼Œä½†å¹¶æœªå¯¹å…¶ä½œä»»ä½•çš„ä¿è¯
+* ç”šè‡³æ²¡æœ‰éšå«çš„é€‚é”€æ€§æˆ–é€‚åˆç‰¹å®šç”¨é€”çš„ä¿è¯
+* æ›´å¤šç»†èŠ‚è¯·å‚è§ GPL
 *
-* ÄúÓ¦¸ÃÔÚÊÕµ½±¾¿ªÔ´¿âµÄÍ¬Ê±ÊÕµ½Ò»·İ GPL µÄ¸±±¾
-* Èç¹ûÃ»ÓĞ£¬Çë²ÎÔÄ<https://www.gnu.org/licenses/>
+* æ‚¨åº”è¯¥åœ¨æ”¶åˆ°æœ¬å¼€æºåº“çš„åŒæ—¶æ”¶åˆ°ä¸€ä»½ GPL çš„å‰¯æœ¬
+* å¦‚æœæ²¡æœ‰ï¼Œè¯·å‚é˜…<https://www.gnu.org/licenses/>
 *
-* ¶îÍâ×¢Ã÷£º
-* ±¾¿ªÔ´¿âÊ¹ÓÃ GPL3.0 ¿ªÔ´Ğí¿ÉÖ¤Ğ­Òé ÒÔÉÏĞí¿ÉÉêÃ÷ÎªÒëÎÄ°æ±¾
-* Ğí¿ÉÉêÃ÷Ó¢ÎÄ°æÔÚ libraries/doc ÎÄ¼ş¼ĞÏÂµÄ GPL3_permission_statement.txt ÎÄ¼şÖĞ
-* Ğí¿ÉÖ¤¸±±¾ÔÚ libraries ÎÄ¼ş¼ĞÏÂ ¼´¸ÃÎÄ¼ş¼ĞÏÂµÄ LICENSE ÎÄ¼ş
-* »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌĞò µ«ĞŞ¸ÄÄÚÈİÊ±±ØĞë±£ÁôÖğ·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷£¨¼´±¾ÉùÃ÷£©
+* é¢å¤–æ³¨æ˜ï¼š
+* æœ¬å¼€æºåº“ä½¿ç”¨ GPL3.0 å¼€æºè®¸å¯è¯åè®® ä»¥ä¸Šè®¸å¯ç”³æ˜ä¸ºè¯‘æ–‡ç‰ˆæœ¬
+* è®¸å¯ç”³æ˜è‹±æ–‡ç‰ˆåœ¨ libraries/doc æ–‡ä»¶å¤¹ä¸‹çš„ GPL3_permission_statement.txt æ–‡ä»¶ä¸­
+* è®¸å¯è¯å‰¯æœ¬åœ¨ libraries æ–‡ä»¶å¤¹ä¸‹ å³è¯¥æ–‡ä»¶å¤¹ä¸‹çš„ LICENSE æ–‡ä»¶
+* æ¬¢è¿å„ä½ä½¿ç”¨å¹¶ä¼ æ’­æœ¬ç¨‹åº ä½†ä¿®æ”¹å†…å®¹æ—¶å¿…é¡»ä¿ç•™é€é£ç§‘æŠ€çš„ç‰ˆæƒå£°æ˜ï¼ˆå³æœ¬å£°æ˜ï¼‰
 *
-* ÎÄ¼şÃû³Æ          zf_device_wifi_spi
-* ¹«Ë¾Ãû³Æ          ³É¶¼Öğ·É¿Æ¼¼ÓĞÏŞ¹«Ë¾
-* °æ±¾ĞÅÏ¢          ²é¿´ libraries/doc ÎÄ¼ş¼ĞÄÚ version ÎÄ¼ş °æ±¾ËµÃ÷
-* ¿ª·¢»·¾³          ADS v1.9.4
-* ÊÊÓÃÆ½Ì¨          TC264D
-* µêÆÌÁ´½Ó          https://seekfree.taobao.com/
+* æ–‡ä»¶åç§°          zf_device_wifi_spi
+* å…¬å¸åç§°          æˆéƒ½é€é£ç§‘æŠ€æœ‰é™å…¬å¸
+* ç‰ˆæœ¬ä¿¡æ¯          æŸ¥çœ‹ libraries/doc æ–‡ä»¶å¤¹å†… version æ–‡ä»¶ ç‰ˆæœ¬è¯´æ˜
+* å¼€å‘ç¯å¢ƒ          ADS v1.9.4
+* é€‚ç”¨å¹³å°          TC264D
+* åº—é“ºé“¾æ¥          https://seekfree.taobao.com/
 *
-* ĞŞ¸Ä¼ÇÂ¼
-* ÈÕÆÚ              ×÷Õß                ±¸×¢
+* ä¿®æ”¹è®°å½•
+* æ—¥æœŸ              ä½œè€…                å¤‡æ³¨
 * 2023-05-27       pudding           first version
-* 2023-05-29       pudding           ĞÂÔö¹Ø±ÕĞİÃßÖ¸Áî£¬ÌáÉıÍ¨Ñ¶Ğ§ÂÊ
+* 2023-05-29       pudding           æ–°å¢å…³é—­ä¼‘çœ æŒ‡ä»¤ï¼Œæå‡é€šè®¯æ•ˆç‡
 ********************************************************************************************************************/
 /*********************************************************************************************************************
-* ½ÓÏß¶¨Òå£º
+* æ¥çº¿å®šä¹‰ï¼š
 *                   ------------------------------------
-*                   Ä£¿é¹Ü½Å            µ¥Æ¬»ú¹Ü½Å
-*                   RST                 ²é¿´ zf_device_wifi_spi.h ÖĞ WIFI_SPI_RST_PIN ºê¶¨Òå
-*                   INT                 ²é¿´ zf_device_wifi_spi.h ÖĞ WIFI_SPI_INT_PIN ºê¶¨Òå
-*                   CS                  ²é¿´ zf_device_wifi_spi.h ÖĞ WIFI_SPI_CS_PIN ºê¶¨Òå
-*                   MISO                ²é¿´ zf_device_wifi_spi.h ÖĞ WIFI_SPI_MISO_PIN ºê¶¨Òå
-*                   SCK                 ²é¿´ zf_device_wifi_spi.h ÖĞ WIFI_SPI_SCK_PIN ºê¶¨Òå
-*                   MOSI                ²é¿´ zf_device_wifi_spi.h ÖĞ WIFI_SPI_MOSI_PIN ºê¶¨Òå
-*                   5V                  5V µçÔ´
-*                   GND                 µçÔ´µØ
-*                   ÆäÓàÒı½ÅĞü¿Õ
+*                   æ¨¡å—ç®¡è„š            å•ç‰‡æœºç®¡è„š
+*                   RST                 æŸ¥çœ‹ zf_device_wifi_spi.h ä¸­ WIFI_SPI_RST_PIN å®å®šä¹‰
+*                   INT                 æŸ¥çœ‹ zf_device_wifi_spi.h ä¸­ WIFI_SPI_INT_PIN å®å®šä¹‰
+*                   CS                  æŸ¥çœ‹ zf_device_wifi_spi.h ä¸­ WIFI_SPI_CS_PIN å®å®šä¹‰
+*                   MISO                æŸ¥çœ‹ zf_device_wifi_spi.h ä¸­ WIFI_SPI_MISO_PIN å®å®šä¹‰
+*                   SCK                 æŸ¥çœ‹ zf_device_wifi_spi.h ä¸­ WIFI_SPI_SCK_PIN å®å®šä¹‰
+*                   MOSI                æŸ¥çœ‹ zf_device_wifi_spi.h ä¸­ WIFI_SPI_MOSI_PIN å®å®šä¹‰
+*                   5V                  5V ç”µæº
+*                   GND                 ç”µæºåœ°
+*                   å…¶ä½™å¼•è„šæ‚¬ç©º
 *                   ------------------------------------
 *********************************************************************************************************************/
 
@@ -63,9 +63,9 @@
 
 #include "zf_device_wifi_spi.h"
 
-#define     WAIT_TIME_OUT               (10000)             // µ¥Ö¸ÁîµÈ´ıÊ±¼ä  µ¥Î»£ºms
+#define     WAIT_TIME_OUT               (10000)             // å•æŒ‡ä»¤ç­‰å¾…æ—¶é—´  å•ä½ï¼šms
 
-#define     WIFI_SPI_WRITE_MAX          4092                // ¶¨ÒåÒ»´ÎSPIÍ¨Ñ¶×î´ó·¢ËÍµÄÊı¾İ³¤¶È
+#define     WIFI_SPI_WRITE_MAX          4092                // å®šä¹‰ä¸€æ¬¡SPIé€šè®¯æœ€å¤§å‘é€çš„æ•°æ®é•¿åº¦
     
 #define     WIFI_SPI_WRITE_REQUEST      0x01
 #define     WIFI_SPI_CHECK_STATE        0x02
@@ -81,19 +81,19 @@ volatile    wifi_spi_buffer_state_enum   wifi_buffer_state;
 volatile    wifi_spi_transmit_state_enum wifi_transmit_state;
 
 static      fifo_struct wifi_spi_fifo;
-static      uint8 wifi_spi_buffer[WIFI_SPI_BUFFER_SIZE];    // Êı¾İ´æ·ÅÊı×é
+static      uint8 wifi_spi_buffer[WIFI_SPI_BUFFER_SIZE];    // æ•°æ®å­˜æ”¾æ•°ç»„
 
-vuint8      wifi_spi_ack_flag = 0;                          // 0£ºÄ£¿éÎ´Ó¦´ğ 1£ºÄ£¿éÒÑÓ¦´ğ
-uint8       wifi_spi_init_flag;                             // 0£ºÄ£¿éÎ´³õÊ¼»¯³É¹¦»òÕßÎ´Á¬½Ó 1£ºÄ£¿éÒÑÁ¬½Ó²¢³É¹¦³õÊ¼»¯
-vuint8      wifi_spi_packet_num;                            // ·¢ËÍµÄÊı¾İ°üID
-vuint32     wifi_spi_send_remain_length;                    // Ê£ÓàµÄ·¢ËÍ³¤¶È
+vuint8      wifi_spi_ack_flag = 0;                          // 0ï¼šæ¨¡å—æœªåº”ç­” 1ï¼šæ¨¡å—å·²åº”ç­”
+uint8       wifi_spi_init_flag;                             // 0ï¼šæ¨¡å—æœªåˆå§‹åŒ–æˆåŠŸæˆ–è€…æœªè¿æ¥ 1ï¼šæ¨¡å—å·²è¿æ¥å¹¶æˆåŠŸåˆå§‹åŒ–
+vuint8      wifi_spi_packet_num;                            // å‘é€çš„æ•°æ®åŒ…ID
+vuint32     wifi_spi_send_remain_length;                    // å‰©ä½™çš„å‘é€é•¿åº¦
                         
 uint8       wifi_spi_receive_buffer[WIFI_SPI_WRITE_MAX];
 
 wifi_spi_information_struct wifi_spi_information;
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      ÇëÇóĞ´ÈëÊı¾İµ½Ä£¿é
-//  ²ÎÊıËµÃ÷      length      ĞèÒªĞ´ÈëµÄ³¤¶È
+//  å‡½æ•°ç®€ä»‹      è¯·æ±‚å†™å…¥æ•°æ®åˆ°æ¨¡å—
+//  å‚æ•°è¯´æ˜      length      éœ€è¦å†™å…¥çš„é•¿åº¦
 //  @return     void
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
@@ -115,9 +115,9 @@ static void wifi_spi_write_request(uint16 length)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      ¶ÁÈ¡Ä£¿é×´Ì¬
-//  ²ÎÊıËµÃ÷      *length     ĞèÒª¶ÁÈ¡»òÕßĞ´ÈëµÄ³¤¶È
-//  @return     WIFI_SPI_BUFFER_STATE_enum  Ä£¿é×´Ì¬
+//  å‡½æ•°ç®€ä»‹      è¯»å–æ¨¡å—çŠ¶æ€
+//  å‚æ•°è¯´æ˜      *length     éœ€è¦è¯»å–æˆ–è€…å†™å…¥çš„é•¿åº¦
+//  @return     WIFI_SPI_BUFFER_STATE_enum  æ¨¡å—çŠ¶æ€
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
 static wifi_spi_buffer_state_enum wifi_spi_read_state(uint16 *length)
@@ -144,8 +144,8 @@ static wifi_spi_buffer_state_enum wifi_spi_read_state(uint16 *length)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      Êı¾İ·¢ËÍÍê³É
-//  ²ÎÊıËµÃ÷      void      
+//  å‡½æ•°ç®€ä»‹      æ•°æ®å‘é€å®Œæˆ
+//  å‚æ•°è¯´æ˜      void      
 //  @return     void
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
@@ -164,8 +164,8 @@ static void wifi_spi_send_done(void)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      Êı¾İ½ÓÊÕÍê³É
-//  ²ÎÊıËµÃ÷      void      
+//  å‡½æ•°ç®€ä»‹      æ•°æ®æ¥æ”¶å®Œæˆ
+//  å‚æ•°è¯´æ˜      void      
 //  @return     void
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
@@ -184,9 +184,9 @@ static void wifi_spi_receive_done(void)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      ·¢ËÍÊı¾İµ½Ä£¿é
-//  ²ÎÊıËµÃ÷      *buff        ĞèÒªĞ´ÈëÊı¾İµÄÊ×µØÖ·
-//  ²ÎÊıËµÃ÷      length       ĞèÒªĞ´ÈëÊı¾İµÄ³¤¶È
+//  å‡½æ•°ç®€ä»‹      å‘é€æ•°æ®åˆ°æ¨¡å—
+//  å‚æ•°è¯´æ˜      *buff        éœ€è¦å†™å…¥æ•°æ®çš„é¦–åœ°å€
+//  å‚æ•°è¯´æ˜      length       éœ€è¦å†™å…¥æ•°æ®çš„é•¿åº¦
 //  @return     void
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
@@ -207,8 +207,8 @@ static void wifi_spi_send_data(const uint8 *buff, uint16 length)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      ·¢ËÍÊı¾İµ½Ä£¿é£¨¶à¸öÔ´µØÖ·£©
-//  ²ÎÊıËµÃ÷      *multi_buffer   ¶à¸öÔ´µØÖ·ÒÔ¼°Ã¿¸öÔ´µØÖ·ĞèÒª·¢ËÍµÄ³¤¶È
+//  å‡½æ•°ç®€ä»‹      å‘é€æ•°æ®åˆ°æ¨¡å—ï¼ˆå¤šä¸ªæºåœ°å€ï¼‰
+//  å‚æ•°è¯´æ˜      *multi_buffer   å¤šä¸ªæºåœ°å€ä»¥åŠæ¯ä¸ªæºåœ°å€éœ€è¦å‘é€çš„é•¿åº¦
 //  @return     void
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
@@ -234,9 +234,9 @@ static void wifi_spi_send_data_multi(wifi_spi_send_multi_struct *multi_buffer)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      ½ÓÊÕÄ£¿é·¢ËÍµÄÊı¾İ
-//  ²ÎÊıËµÃ÷      *buff        ½ÓÊÕÊı×éµÄ»º³åÇøÊ×µØÖ·
-//  ²ÎÊıËµÃ÷      length       ĞèÒª½ÓÊÕµÄ³¤¶È
+//  å‡½æ•°ç®€ä»‹      æ¥æ”¶æ¨¡å—å‘é€çš„æ•°æ®
+//  å‚æ•°è¯´æ˜      *buff        æ¥æ”¶æ•°ç»„çš„ç¼“å†²åŒºé¦–åœ°å€
+//  å‚æ•°è¯´æ˜      length       éœ€è¦æ¥æ”¶çš„é•¿åº¦
 //  @return     void
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
@@ -257,8 +257,8 @@ static void wifi_spi_receive_data(uint8 *buff, uint16 length)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      ·¢ËÍÃüÁîµ½Ä£¿é
-//  ²ÎÊıËµÃ÷      *str        ÃüÁî×Ö·û´®Ê×µØÖ·
+//  å‡½æ•°ç®€ä»‹      å‘é€å‘½ä»¤åˆ°æ¨¡å—
+//  å‚æ•°è¯´æ˜      *str        å‘½ä»¤å­—ç¬¦ä¸²é¦–åœ°å€
 //  @return     void
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
@@ -268,13 +268,13 @@ static void wifi_spi_send_command(const char *str)
     uint16 send_length;
     uint16 wait_time = 0;
     
-    // ÇëÇó·¢ËÍÊı¾İ
+    // è¯·æ±‚å‘é€æ•°æ®
     send_length = (uint16)strlen(str);
 
-    // µÈ´ı´«Êä½øÈë¿ÕÏĞ
+    // ç­‰å¾…ä¼ è¾“è¿›å…¥ç©ºé—²
     while(TRANSMIT_IDLE != wifi_transmit_state);
 
-    // Èç¹ûÃ»ÓĞ½øÈë·¢ËÍ×´Ì¬ÔòÖØĞÂÇëÇó·¢ËÍÊı¾İ
+    // å¦‚æœæ²¡æœ‰è¿›å…¥å‘é€çŠ¶æ€åˆ™é‡æ–°è¯·æ±‚å‘é€æ•°æ®
     while(BUFFER_WRITE != wifi_buffer_state)
     {
         wifi_spi_ack_flag = 0;
@@ -285,7 +285,7 @@ static void wifi_spi_send_command(const char *str)
             if((WAIT_TIME_OUT / 4) <= wait_time)
             {
                 state = 1;
-                wifi_spi_init_flag = 0; // Ä£¿éÒÑ¶Ï¿ª
+                wifi_spi_init_flag = 0; // æ¨¡å—å·²æ–­å¼€
                 break;
             }
             system_delay_ms(1);
@@ -299,45 +299,45 @@ static void wifi_spi_send_command(const char *str)
     
     wifi_buffer_state = BUFFER_IDLE;
     
-    if(0 == state) // Í¨Ñ¶Î´³¬Ê±
+    if(0 == state) // é€šè®¯æœªè¶…æ—¶
     {
         wifi_spi_send_remain_length = send_length;
-        // ·¢ËÍÏûÏ¢
+        // å‘é€æ¶ˆæ¯
         wifi_spi_send_data((const uint8 *)str, send_length);
     }
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      ¼ì²éÄ£¿é×´Ì¬²¢¶ÁÈ¡Ä£¿é·¢ËÍµÄÊı¾İ
-//  ²ÎÊıËµÃ÷      void        
+//  å‡½æ•°ç®€ä»‹      æ£€æŸ¥æ¨¡å—çŠ¶æ€å¹¶è¯»å–æ¨¡å—å‘é€çš„æ•°æ®
+//  å‚æ•°è¯´æ˜      void        
 //  @return     void
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
 void wifi_spi_check_state_read_buffer(void)
 {
-    uint16 wifi_spi_receive_length; // ±¾´Î½ÓÊÕµ½µÄÊı¾İÊıÁ¿
+    uint16 wifi_spi_receive_length; // æœ¬æ¬¡æ¥æ”¶åˆ°çš„æ•°æ®æ•°é‡
     
-    // ²éÑ¯WIFIÄ£¿éµÄ×´Ì¬
+    // æŸ¥è¯¢WIFIæ¨¡å—çš„çŠ¶æ€
     wifi_buffer_state = wifi_spi_read_state(&wifi_spi_receive_length);
     
-    // Èç¹ûĞèÒª¶ÁÈ¡WIFIÄ£¿éÊı¾İ£¬Ôò±£´æĞèÒª¶ÁÈ¡µÄ³¤¶È
+    // å¦‚æœéœ€è¦è¯»å–WIFIæ¨¡å—æ•°æ®ï¼Œåˆ™ä¿å­˜éœ€è¦è¯»å–çš„é•¿åº¦
     if(BUFFER_READ == wifi_buffer_state)
     {
         wifi_spi_receive_data((uint8 *)wifi_spi_receive_buffer, wifi_spi_receive_length);
-        fifo_write_buffer(&wifi_spi_fifo, wifi_spi_receive_buffer, wifi_spi_receive_length);  // ´æÈë FIFO
+        fifo_write_buffer(&wifi_spi_fifo, wifi_spi_receive_buffer, wifi_spi_receive_length);  // å­˜å…¥ FIFO
     }
     else if(BUFFER_IDLE == wifi_buffer_state)
     {
-        // Èç¹ûÄ£¿éÄÚ²¿»º³åÇø×´Ì¬Îª¿ÕÏĞ£¬Ôò´«Êä×´Ì¬Ò²ÉèÖÃÎª¿ÕÏĞ
+        // å¦‚æœæ¨¡å—å†…éƒ¨ç¼“å†²åŒºçŠ¶æ€ä¸ºç©ºé—²ï¼Œåˆ™ä¼ è¾“çŠ¶æ€ä¹Ÿè®¾ç½®ä¸ºç©ºé—²
         wifi_transmit_state = TRANSMIT_IDLE;
     }
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      ·¢ËÍÊı¾İµ½Ä£¿é
-//  ²ÎÊıËµÃ÷      *buff       ĞèÒª·¢ËÍµÄÊı¾İÊ×µØÖ·     
-//  ²ÎÊıËµÃ÷      length      ĞèÒª·¢ËÍµÄ³¤¶È
-//  @return     uint32      Ê£ÓàÎ´·¢ËÍ³¤¶È
+//  å‡½æ•°ç®€ä»‹      å‘é€æ•°æ®åˆ°æ¨¡å—
+//  å‚æ•°è¯´æ˜      *buff       éœ€è¦å‘é€çš„æ•°æ®é¦–åœ°å€     
+//  å‚æ•°è¯´æ˜      length      éœ€è¦å‘é€çš„é•¿åº¦
+//  @return     uint32      å‰©ä½™æœªå‘é€é•¿åº¦
 //  Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wifi_spi_write_data(const uint8 *buff, uint32 length)
@@ -345,18 +345,18 @@ uint32 wifi_spi_write_data(const uint8 *buff, uint32 length)
     uint16 send_length;
     uint32 wait_time;
     
-    // ¼ÇÂ¼ĞèÒª·¢ËÍµÄ³¤¶È
+    // è®°å½•éœ€è¦å‘é€çš„é•¿åº¦
     wifi_spi_send_remain_length = length;
 
     while(wifi_spi_send_remain_length)
     {
         send_length = (uint16)func_limit_ab(wifi_spi_send_remain_length, 1, WIFI_SPI_WRITE_MAX);
         
-        // ÇëÇó·¢ËÍÊı¾İ
+        // è¯·æ±‚å‘é€æ•°æ®
         wifi_spi_ack_flag = 0;
         wifi_spi_write_request(send_length);
         
-        // ×î³¤µÈ´ı5Ãë
+        // æœ€é•¿ç­‰å¾…5ç§’
         wait_time = 5000;
         while(!wifi_spi_ack_flag)
         {
@@ -367,7 +367,7 @@ uint32 wifi_spi_write_data(const uint8 *buff, uint32 length)
         
         if(BUFFER_WRITE == wifi_buffer_state)
         {
-            // ·¢ËÍÏûÏ¢
+            // å‘é€æ¶ˆæ¯
             wifi_spi_send_data(buff, send_length);
             buff += send_length;
             wifi_spi_send_remain_length -= send_length;
@@ -383,26 +383,26 @@ uint32 wifi_spi_write_data(const uint8 *buff, uint32 length)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  º¯Êı¼ò½é      ·¢ËÍÊı¾İµ½Ä£¿é(¶à¸öÔ´µØÖ·)
-//  ²ÎÊıËµÃ÷      *multi_buffer   ¶à¸öÔ´µØÖ·ÒÔ¼°Ã¿¸öÔ´µØÖ·ĞèÒª·¢ËÍµÄ³¤¶È
-//  @return     uint32          Ê£ÓàÎ´·¢ËÍ³¤¶È
-//  Sample usage:               ·¢ËÍÊı¾İ×Ü³¤¶È²»ÄÜ³¬¹ı4092¸ö
+//  å‡½æ•°ç®€ä»‹      å‘é€æ•°æ®åˆ°æ¨¡å—(å¤šä¸ªæºåœ°å€)
+//  å‚æ•°è¯´æ˜      *multi_buffer   å¤šä¸ªæºåœ°å€ä»¥åŠæ¯ä¸ªæºåœ°å€éœ€è¦å‘é€çš„é•¿åº¦
+//  @return     uint32          å‰©ä½™æœªå‘é€é•¿åº¦
+//  Sample usage:               å‘é€æ•°æ®æ€»é•¿åº¦ä¸èƒ½è¶…è¿‡4092ä¸ª
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wifi_spi_write_data_multi(wifi_spi_send_multi_struct *multi_buffer)
 {
     uint16 send_length;
     uint32 wait_time;
     
-    // ¼ÇÂ¼ĞèÒª·¢ËÍµÄ³¤¶È
+    // è®°å½•éœ€è¦å‘é€çš„é•¿åº¦
     send_length = multi_buffer->length[0] + multi_buffer->length[1] + multi_buffer->length[2] + multi_buffer->length[3] + multi_buffer->length[4] + multi_buffer->length[5] + multi_buffer->length[6] + multi_buffer->length[7];
     
     if(WIFI_SPI_WRITE_MAX >= send_length)
     {
-        // ÇëÇó·¢ËÍÊı¾İ
+        // è¯·æ±‚å‘é€æ•°æ®
         wifi_spi_ack_flag = 0;
         wifi_spi_write_request(send_length);
         
-        // ×î³¤µÈ´ı5Ãë
+        // æœ€é•¿ç­‰å¾…5ç§’
         wait_time = 5000;
         while(!wifi_spi_ack_flag)
         {
@@ -413,7 +413,7 @@ uint32 wifi_spi_write_data_multi(wifi_spi_send_multi_struct *multi_buffer)
         
         if(BUFFER_WRITE == wifi_buffer_state)
         {
-            // ·¢ËÍÏûÏ¢
+            // å‘é€æ¶ˆæ¯
             wifi_spi_send_data_multi(multi_buffer);
             send_length = 0;
             wifi_buffer_state = BUFFER_IDLE;
@@ -424,11 +424,11 @@ uint32 wifi_spi_write_data_multi(wifi_spi_send_multi_struct *multi_buffer)
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     µÈ´ıÄ£¿éÏìÓ¦
-// ²ÎÊıËµÃ÷     *wait_buffer    µÈ´ıµÄÏìÓ¦µÄ×Ö·û´®
-// ²ÎÊıËµÃ÷     timeout         ³¬Ê±Ê±¼ä
-// ·µ»Ø²ÎÊı     uint8           0£ºÄ£¿éÏìÓ¦Ö¸¶¨Êı¾İ   1£ºÄ£¿éÎ´ÏìÓ¦Ö¸¶¨Êı¾İ»ò³¬Ê±
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     ç­‰å¾…æ¨¡å—å“åº”
+// å‚æ•°è¯´æ˜     *wait_buffer    ç­‰å¾…çš„å“åº”çš„å­—ç¬¦ä¸²
+// å‚æ•°è¯´æ˜     timeout         è¶…æ—¶æ—¶é—´
+// è¿”å›å‚æ•°     uint8           0ï¼šæ¨¡å—å“åº”æŒ‡å®šæ•°æ®   1ï¼šæ¨¡å—æœªå“åº”æŒ‡å®šæ•°æ®æˆ–è¶…æ—¶
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_wait_ack (char *wait_buffer, uint32 timeout)
 {
@@ -439,7 +439,7 @@ static uint8 wifi_spi_wait_ack (char *wait_buffer, uint32 timeout)
     do
     {
         system_delay_ms(1);
-        // ÅĞ¶Ï½ÓÊÕ»º³åÇøÄÚÊÇ·ñÓĞĞèÒªÏìÓ¦µÄÖ¸¶¨Êı¾İ Èç¹ûÓĞ ÔòÌø³öÑ­»·²¢ÇÒ·µ»Ø0
+        // åˆ¤æ–­æ¥æ”¶ç¼“å†²åŒºå†…æ˜¯å¦æœ‰éœ€è¦å“åº”çš„æŒ‡å®šæ•°æ® å¦‚æœæœ‰ åˆ™è·³å‡ºå¾ªç¯å¹¶ä¸”è¿”å›0
         receiver_len = 8;
         fifo_read_tail_buffer(&wifi_spi_fifo, (uint8 *)receiver_buffer, &receiver_len, FIFO_READ_ONLY);
 
@@ -450,7 +450,7 @@ static uint8 wifi_spi_wait_ack (char *wait_buffer, uint32 timeout)
         }
         else if(strstr(receiver_buffer, "ERROR") || strstr(receiver_buffer, "busy"))
         {
-        // Èç¹û½ÓÊÕµ½±¨´í»òÕßÄ£¿éÃ¦ ÔòÌø³öÑ­»·²¢ÇÒ·µ»Ø1
+        // å¦‚æœæ¥æ”¶åˆ°æŠ¥é”™æˆ–è€…æ¨¡å—å¿™ åˆ™è·³å‡ºå¾ªç¯å¹¶ä¸”è¿”å›1
             return_state = 1;
             break;
         }
@@ -460,27 +460,27 @@ static uint8 wifi_spi_wait_ack (char *wait_buffer, uint32 timeout)
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     Çå³ıWiFi½ÓÊÕ»º³åÇøÄÚÈİ
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     void
-// Ê¹ÓÃÊ¾Àı     wifi_spi_clear_receive_buffer();
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     æ¸…é™¤WiFiæ¥æ”¶ç¼“å†²åŒºå†…å®¹
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     void
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_clear_receive_buffer();
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static void wifi_spi_clear_receive_buffer (void)
 {
-    // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     fifo_clear(&wifi_spi_fifo);
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     Ä£¿éÊı¾İ½âÎö
-// ²ÎÊıËµÃ÷     *target_buffer  Ä¿±ê´æ·ÅµØÖ·Ö¸Õë ×Ö·û´®Êı×é
-// ²ÎÊıËµÃ÷     *origin_buffer  Êı¾İÀ´Ô´µØÖ·Ö¸Õë ×Ö·û´®Êı×é
-// ²ÎÊıËµÃ÷     start_char      ÆğÊ¼ÌáÈ¡×Ö½Ú ÀıÈç´Ó "1234" ÖĞ´Ó '2' ¿ªÊ¼ÌáÈ¡ ¾ÍÓ¦¸ÃÌîÈë '2'
-// ²ÎÊıËµÃ÷     end_char        ½áÊøÌáÈ¡×Ö½Ú ÀıÈç´Ó "1234" ÖĞÔÚ '4' ½áÊøÌáÈ¡ ¾ÍÓ¦¸ÃÌîÈë '\0'(0x00 ¿Õ×Ö·û Ò»°ãÊÇ×Ö·û´®½áÎ²)
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_data_parse(wifi_spi_information.mac, wifi_spi_receive_buffer, '"', '"'); // µ÷ÓÃ»ñÈ¡±¾»úmacµØÖ·ºó£¬µ÷ÓÃ´Ëº¯ÊıÌáÈ¡macµØÖ·
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     æ¨¡å—æ•°æ®è§£æ
+// å‚æ•°è¯´æ˜     *target_buffer  ç›®æ ‡å­˜æ”¾åœ°å€æŒ‡é’ˆ å­—ç¬¦ä¸²æ•°ç»„
+// å‚æ•°è¯´æ˜     *origin_buffer  æ•°æ®æ¥æºåœ°å€æŒ‡é’ˆ å­—ç¬¦ä¸²æ•°ç»„
+// å‚æ•°è¯´æ˜     start_char      èµ·å§‹æå–å­—èŠ‚ ä¾‹å¦‚ä» "1234" ä¸­ä» '2' å¼€å§‹æå– å°±åº”è¯¥å¡«å…¥ '2'
+// å‚æ•°è¯´æ˜     end_char        ç»“æŸæå–å­—èŠ‚ ä¾‹å¦‚ä» "1234" ä¸­åœ¨ '4' ç»“æŸæå– å°±åº”è¯¥å¡«å…¥ '\0'(0x00 ç©ºå­—ç¬¦ ä¸€èˆ¬æ˜¯å­—ç¬¦ä¸²ç»“å°¾)
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_data_parse(wifi_spi_information.mac, wifi_spi_receive_buffer, '"', '"'); // è°ƒç”¨è·å–æœ¬æœºmacåœ°å€åï¼Œè°ƒç”¨æ­¤å‡½æ•°æå–macåœ°å€
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_data_parse (uint8 *target_buffer, uint8 *origin_buffer, char start_char, char end_char)
 {
@@ -509,11 +509,11 @@ static uint8 wifi_spi_data_parse (uint8 *target_buffer, uint8 *origin_buffer, ch
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ²é¿´Ä£¿é°æ±¾ĞÅÏ¢
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_get_version();
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     æŸ¥çœ‹æ¨¡å—ç‰ˆæœ¬ä¿¡æ¯
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_get_version();
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_get_version (void)
 {
@@ -522,7 +522,7 @@ static uint8 wifi_spi_get_version (void)
     uint8 receiver_buffer[256];
     uint32 receiver_len = 256;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     wifi_spi_send_command("AT+GMR\r\n");
     do
     {
@@ -541,23 +541,23 @@ static uint8 wifi_spi_get_version (void)
             break;
         }
     }while(0);
-    wifi_spi_clear_receive_buffer();                                           // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer();                                           // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     Ä£¿é»ØÏÔÉèÖÃ
-// ²ÎÊıËµÃ÷     model           0:¹Ø±ÕÄ£¿éµÄ»ØĞ´¹¦ÄÜ  ÆäËû£º¿ªÆôÄ£¿é»ØĞ´
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_echo_set("1");//¿ªÆôÄ£¿é»ØĞ´¹¦ÄÜ
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     æ¨¡å—å›æ˜¾è®¾ç½®
+// å‚æ•°è¯´æ˜     model           0:å…³é—­æ¨¡å—çš„å›å†™åŠŸèƒ½  å…¶ä»–ï¼šå¼€å¯æ¨¡å—å›å†™
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_echo_set("1");//å¼€å¯æ¨¡å—å›å†™åŠŸèƒ½
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_echo_set (char *model)
 {
     uint8 return_state = 0;
     
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     
     if('1' == *model)
     {
@@ -569,17 +569,17 @@ static uint8 wifi_spi_echo_set (char *model)
     }
 
     return_state = wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ²éÑ¯Ä£¿é×ÔÉí µÄ MAC µØÖ·
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     if(wifi_spi_get_mac()){}
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     æŸ¥è¯¢æ¨¡å—è‡ªèº« çš„ MAC åœ°å€
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     if(wifi_spi_get_mac()){}
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_get_mac (void)
 {
@@ -587,7 +587,7 @@ static uint8 wifi_spi_get_mac (void)
     uint8 receiver_buffer[64];
     uint32 receiver_len = 64;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     wifi_spi_send_command("AT+CIPAPMAC?\r\n");
     do
     {
@@ -604,24 +604,24 @@ static uint8 wifi_spi_get_mac (void)
             break;
         }
     }while(0);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ²éÑ¯Ä£¿é»òÕßÄ¿±êWIFI µÄ IP µØÖ·(È¡¾öÓÚÄ£¿éµ±Ç°µÄ¹¤×÷Ä£Ê½)
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     if(wifi_spi_get_ip()){}
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     æŸ¥è¯¢æ¨¡å—æˆ–è€…ç›®æ ‡WIFI çš„ IP åœ°å€(å–å†³äºæ¨¡å—å½“å‰çš„å·¥ä½œæ¨¡å¼)
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     if(wifi_spi_get_ip()){}
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_get_ip (void)
 {
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     if(WIFI_SPI_STATION == wifi_spi_information.mode)
     {
         wifi_spi_send_command("AT+CIPSTA?\r\n");
@@ -647,36 +647,36 @@ static uint8 wifi_spi_get_ip (void)
             break;
         }
     }while(0);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ²éÑ¯Ä£¿éµÄÏà¹ØĞÅÏ¢
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     if(wifi_spi_get_information()){}
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     æŸ¥è¯¢æ¨¡å—çš„ç›¸å…³ä¿¡æ¯
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     if(wifi_spi_get_information()){}
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_get_information (void)
 {
     uint8 return_state = 0;
     do
     {
-        // »ñÈ¡Ä£¿é°æ±¾ºÅ
+        // è·å–æ¨¡å—ç‰ˆæœ¬å·
         if(wifi_spi_get_version())
         {
             return_state = 1;
             break;
         }
-        // »ñÈ¡Ä£¿éIPµØÖ·
+        // è·å–æ¨¡å—IPåœ°å€
         if(wifi_spi_get_ip())
         {
             return_state = 1;
             break;
         }
-        // »ñÈ¡Ä£¿éMACĞÅÏ¢
+        // è·å–æ¨¡å—MACä¿¡æ¯
         if(wifi_spi_get_mac())
         {
             return_state = 1;
@@ -688,20 +688,20 @@ static uint8 wifi_spi_get_information (void)
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     Á¬½Ó WiFi
-// ²ÎÊıËµÃ÷     wifi_ssid       WiFiÃû³Æ
-// ²ÎÊıËµÃ÷     pass_word       WiFiÃÜÂë
-// ²ÎÊıËµÃ÷     model           0:²éÑ¯WiFiÁ¬½ÓÇé¿ö   ÆäËû£ºÁ¬½ÓWiFi
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_get_or_connect_wifi("WiFi_name", "Pass_word", 1);
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     è¿æ¥ WiFi
+// å‚æ•°è¯´æ˜     wifi_ssid       WiFiåç§°
+// å‚æ•°è¯´æ˜     pass_word       WiFiå¯†ç 
+// å‚æ•°è¯´æ˜     model           0:æŸ¥è¯¢WiFiè¿æ¥æƒ…å†µ   å…¶ä»–ï¼šè¿æ¥WiFi
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_get_or_connect_wifi("WiFi_name", "Pass_word", 1);
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_set_wifi (char *wifi_ssid, char *pass_word)
 {
     char temp[64];
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     if(WIFI_SPI_SOFTAP == wifi_spi_information.mode)
     {
         sprintf(temp, "AT+CWSAP=\"%s\",\"%s\",5,3\r\n", wifi_ssid, pass_word);
@@ -713,87 +713,87 @@ static uint8 wifi_spi_set_wifi (char *wifi_ssid, char *pass_word)
         wifi_spi_send_command(temp);
     }
     return_state = wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÉÏµçÊÇ·ñ×Ô¶¯Á¬½ÓWiFi
-// ²ÎÊıËµÃ÷     model           0:ÉÏµç²»×Ô¶¯Á¬½Ówifi   ÆäËû£ºÉÏµç×Ô¶¯Á¬½Ówifi
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_auto_connect_wifi(0); //ÉÏµç²»×Ô¶¯Á¬½Ówifi
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     ä¸Šç”µæ˜¯å¦è‡ªåŠ¨è¿æ¥WiFi
+// å‚æ•°è¯´æ˜     model           0:ä¸Šç”µä¸è‡ªåŠ¨è¿æ¥wifi   å…¶ä»–ï¼šä¸Šç”µè‡ªåŠ¨è¿æ¥wifi
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_auto_connect_wifi(0); //ä¸Šç”µä¸è‡ªåŠ¨è¿æ¥wifi
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_auto_connect_wifi (char *model)
 {
     char temp[64];
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     sprintf(temp, "AT+CWAUTOCONN=%s\r\n", model);
     wifi_spi_send_command(temp);
     return_state = wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÉèÖÃÁ¬½ÓÄ£Ê½
-// ²ÎÊıËµÃ÷     model           0: µ¥Á¬½ÓÄ£Ê½     1£º¶àÁ¬½ÓÄ£Ê½
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_set_connect_model("1");
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     è®¾ç½®è¿æ¥æ¨¡å¼
+// å‚æ•°è¯´æ˜     model           0: å•è¿æ¥æ¨¡å¼     1ï¼šå¤šè¿æ¥æ¨¡å¼
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_set_connect_model("1");
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_set_connect_model (char *model)
 {
     char temp[64];
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     sprintf(temp, "AT+CIPMUX=%s\r\n", model);
     wifi_spi_send_command(temp);
     return_state = wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÉèÖÃ´«ÊäÄ£Ê½
-// ²ÎÊıËµÃ÷     model           ¨C 0: ÆÕÍ¨´«ÊäÄ£Ê½     IP¶Ï¿ªºó²»ÖØĞÂÁ¬½Ó
-//                              ¨C 1: Wi-Fi Í¸´«½ÓÊÕÄ£Ê½£¬½öÖ§³Ö TCP µ¥Á¬½Ó¡¢UDP ¹Ì¶¨Í¨ĞÅ¶Ô¶Ë¡¢SSL µ¥Á¬½ÓµÄÇé¿ö     IP¶Ï¿ªºó»á²»¶Ï³¢ÊÔÖØĞÂÁ¬½Ó
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_set_transfer_model("1");
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     è®¾ç½®ä¼ è¾“æ¨¡å¼
+// å‚æ•°è¯´æ˜     model           â€“ 0: æ™®é€šä¼ è¾“æ¨¡å¼     IPæ–­å¼€åä¸é‡æ–°è¿æ¥
+//                              â€“ 1: Wi-Fi é€ä¼ æ¥æ”¶æ¨¡å¼ï¼Œä»…æ”¯æŒ TCP å•è¿æ¥ã€UDP å›ºå®šé€šä¿¡å¯¹ç«¯ã€SSL å•è¿æ¥çš„æƒ…å†µ     IPæ–­å¼€åä¼šä¸æ–­å°è¯•é‡æ–°è¿æ¥
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_set_transfer_model("1");
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 static uint8 wifi_spi_set_transfer_model (char *model)
 {
     char temp[64];
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     sprintf(temp, "AT+CIPMODE=%s\r\n", model);
     wifi_spi_send_command(temp);
     return_state = wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÉèÖÃÄ£¿éÄ£Ê½ (Station/SoftAP/Station+SoftAP)
-// ²ÎÊıËµÃ÷     state           0:ÎŞ Wi-Fi Ä£Ê½£¬²¢ÇÒ¹Ø±Õ Wi-Fi RF----1: Station Ä£Ê½----2: SoftAP Ä£Ê½----3: SoftAP+Station Ä£Ê½
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_set_model("1");
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     è®¾ç½®æ¨¡å—æ¨¡å¼ (Station/SoftAP/Station+SoftAP)
+// å‚æ•°è¯´æ˜     state           0:æ—  Wi-Fi æ¨¡å¼ï¼Œå¹¶ä¸”å…³é—­ Wi-Fi RF----1: Station æ¨¡å¼----2: SoftAP æ¨¡å¼----3: SoftAP+Station æ¨¡å¼
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_set_model("1");
+// å¤‡æ³¨ä¿¡æ¯     
 //--------------------------------------------------------------------------------------------------
 uint8 wifi_spi_set_model (wifi_spi_mode_enum  mode)
 {
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     if(WIFI_SPI_SOFTAP == mode)
     {
@@ -803,82 +803,82 @@ uint8 wifi_spi_set_model (wifi_spi_mode_enum  mode)
     {
         wifi_spi_send_command("AT+CWMODE=1\r\n");
     }
-    // ÉèÖÃÄ£¿é¹¤×÷Ä£Ê½
+    // è®¾ç½®æ¨¡å—å·¥ä½œæ¨¡å¼
     wifi_spi_information.mode = mode;
     return_state = wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ¹Ø±ÕË¯ÃßÄ£Ê½
-// ²ÎÊıËµÃ÷     mode
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı
-// ±¸×¢ĞÅÏ¢
+// å‡½æ•°ç®€ä»‹     å…³é—­ç¡çœ æ¨¡å¼
+// å‚æ•°è¯´æ˜     mode
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹
+// å¤‡æ³¨ä¿¡æ¯
 //--------------------------------------------------------------------------------------------------
 uint8 wifi_spi_close_sleep_model (void)
 {
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     wifi_spi_send_command("AT+SLEEP=0\r\n");
-    // ÉèÖÃÄ£¿é¹¤×÷Ä£Ê½
+    // è®¾ç½®æ¨¡å—å·¥ä½œæ¨¡å¼
     return_state = wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ¶Ï¿ªÓëwifiµÄÁ¬½Ó
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_disconnected_wifi();
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     æ–­å¼€ä¸wifiçš„è¿æ¥
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_disconnected_wifi();
+// å¤‡æ³¨ä¿¡æ¯     
 //--------------------------------------------------------------------------------------------------
 uint8 wifi_spi_disconnected_wifi (void)
 {
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     wifi_spi_send_command("AT+CWQAP\r\n");
     return_state = wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ½øÈë´ò¿ªÍ¸´«Ä£Ê½
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_entry_serianet();
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     è¿›å…¥æ‰“å¼€é€ä¼ æ¨¡å¼
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_entry_serianet();
+// å¤‡æ³¨ä¿¡æ¯     
 //--------------------------------------------------------------------------------------------------
 uint8 wifi_spi_entry_serianet (void)
 {
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     wifi_spi_send_command("AT+CIPSEND\r\n");
     return_state = wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ÍË³öÍ¸´«Ä£Ê½
-// ²ÎÊıËµÃ÷     model           0:¹Ø±ÕÍ¸´«Ä£Ê½   ÆäËû£º¿ªÆôÍ¸´«Ä£Ê½
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_exit_serianet(1);
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     é€€å‡ºé€ä¼ æ¨¡å¼
+// å‚æ•°è¯´æ˜     model           0:å…³é—­é€ä¼ æ¨¡å¼   å…¶ä»–ï¼šå¼€å¯é€ä¼ æ¨¡å¼
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_exit_serianet(1);
+// å¤‡æ³¨ä¿¡æ¯     
 //--------------------------------------------------------------------------------------------------
 uint8 wifi_spi_exit_serianet (void)
 {
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     system_delay_ms(20);
     wifi_spi_send_command("+++");
@@ -888,20 +888,20 @@ uint8 wifi_spi_exit_serianet (void)
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ½¨Á¢TCPÁ¬½Ó
-// ²ÎÊıËµÃ÷     ip              Ô¶¶Ë IPv4 µØÖ·¡¢IPv6 µØÖ·£¬»òÓòÃû
-// ²ÎÊıËµÃ÷     port            Ô¶¶Ë¶Ë¿ÚÖµ
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_connect_tcp_servers("192.168.101.110", "8080");
-// ±¸×¢ĞÅÏ¢     Èç¹û×ÜÊÇÁ¬½Ó²»ÉÏµçÄÔµÄTCP·şÎñÆ÷ ¿ÉÒÔ³¢ÊÔÊ¹ÓÃÍøÏßÁ¬½ÓµçÄÔ
-//              Èç¹ûÊÇÊ¹ÓÃWiFiÁ¬½Ó ¿ÉÄÜ»áµ¼ÖÂÄ£¿éÁ¬½ÓTCP·şÎñÆ÷µÈ´ı½Ï³¤Ê±¼ä
+// å‡½æ•°ç®€ä»‹     å»ºç«‹TCPè¿æ¥
+// å‚æ•°è¯´æ˜     ip              è¿œç«¯ IPv4 åœ°å€ã€IPv6 åœ°å€ï¼Œæˆ–åŸŸå
+// å‚æ•°è¯´æ˜     port            è¿œç«¯ç«¯å£å€¼
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_connect_tcp_servers("192.168.101.110", "8080");
+// å¤‡æ³¨ä¿¡æ¯     å¦‚æœæ€»æ˜¯è¿æ¥ä¸ä¸Šç”µè„‘çš„TCPæœåŠ¡å™¨ å¯ä»¥å°è¯•ä½¿ç”¨ç½‘çº¿è¿æ¥ç”µè„‘
+//              å¦‚æœæ˜¯ä½¿ç”¨WiFiè¿æ¥ å¯èƒ½ä¼šå¯¼è‡´æ¨¡å—è¿æ¥TCPæœåŠ¡å™¨ç­‰å¾…è¾ƒé•¿æ—¶é—´
 //--------------------------------------------------------------------------------------------------
 uint8 wifi_spi_connect_tcp_servers (char *ip, char *port, wifi_spi_transfer_mode_enum mode)
 {
     char temp[64];
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer();        // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer();        // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     do
     {
         if(wifi_spi_set_connect_model("0"))
@@ -910,7 +910,7 @@ uint8 wifi_spi_connect_tcp_servers (char *ip, char *port, wifi_spi_transfer_mode
             break;
         }
 
-        wifi_spi_clear_receive_buffer();    // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+        wifi_spi_clear_receive_buffer();    // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
         sprintf(temp, "AT+CIPSTARTEX=\"TCP\",\"%s\",%s\r\n", ip, port);
         wifi_spi_send_command(temp);
 
@@ -921,16 +921,16 @@ uint8 wifi_spi_connect_tcp_servers (char *ip, char *port, wifi_spi_transfer_mode
             break;
         }
 
-        wifi_spi_clear_receive_buffer();    // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+        wifi_spi_clear_receive_buffer();    // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
-        // ÉèÖÃ´«ÊäÄ£Ê½
+        // è®¾ç½®ä¼ è¾“æ¨¡å¼
         if(wifi_spi_set_transfer_model(WIFI_SPI_COMMAND == mode ? "0" : "1"))
         {
             return_state = 1;
             break;
         }
 
-        wifi_spi_clear_receive_buffer();    // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+        wifi_spi_clear_receive_buffer();    // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
         wifi_spi_send_command("AT+CIPSTATE?\r\n");
         if(wifi_spi_wait_ack("OK", WAIT_TIME_OUT))
         {
@@ -958,8 +958,8 @@ uint8 wifi_spi_connect_tcp_servers (char *ip, char *port, wifi_spi_transfer_mode
         wifi_spi_information.connect_mode = WIFI_SPI_TCP_CLIENT;
         wifi_spi_information.transfer_mode = mode;
 
-        wifi_spi_clear_receive_buffer();    // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
-        if(WIFI_SPI_SERIANET == mode)       // Í¸´«Ä£Ê½ÏÂÖ±½Ó¿ªÆôÍ¸´«
+        wifi_spi_clear_receive_buffer();    // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
+        if(WIFI_SPI_SERIANET == mode)       // é€ä¼ æ¨¡å¼ä¸‹ç›´æ¥å¼€å¯é€ä¼ 
         {
             if(wifi_spi_entry_serianet())
             {
@@ -969,27 +969,27 @@ uint8 wifi_spi_connect_tcp_servers (char *ip, char *port, wifi_spi_transfer_mode
         }
 
     }while(0);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ½¨Á¢UDPÁ¬½Ó
-// ²ÎÊıËµÃ÷     *ip             Ô¶¶Ë IPv4 µØÖ·¡¢IPv6 µØÖ· »òÓòÃû ×Ö·û´®ĞÎÊ½
-// ²ÎÊıËµÃ÷     *port           Ô¶¶Ë¶Ë¿ÚÖµ ×Ö·û´®ĞÎÊ½
-// ²ÎÊıËµÃ÷     *local_port     Ô¶¶Ë IPv4 µØÖ·¡¢IPv6 µØÖ· »òÓòÃû ×Ö·û´®ĞÎÊ½
-// ²ÎÊıËµÃ÷     mode            Ä£¿éÊı¾İÍ¨ĞÅÄ£Ê½
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_connect_udp_client("192.168.101.110", "8080", "8080", WIFI_SPI_COMMAND);
-// ±¸×¢ĞÅÏ¢     ×Ô¶¯·ÖÅäID
+// å‡½æ•°ç®€ä»‹     å»ºç«‹UDPè¿æ¥
+// å‚æ•°è¯´æ˜     *ip             è¿œç«¯ IPv4 åœ°å€ã€IPv6 åœ°å€ æˆ–åŸŸå å­—ç¬¦ä¸²å½¢å¼
+// å‚æ•°è¯´æ˜     *port           è¿œç«¯ç«¯å£å€¼ å­—ç¬¦ä¸²å½¢å¼
+// å‚æ•°è¯´æ˜     *local_port     è¿œç«¯ IPv4 åœ°å€ã€IPv6 åœ°å€ æˆ–åŸŸå å­—ç¬¦ä¸²å½¢å¼
+// å‚æ•°è¯´æ˜     mode            æ¨¡å—æ•°æ®é€šä¿¡æ¨¡å¼
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_connect_udp_client("192.168.101.110", "8080", "8080", WIFI_SPI_COMMAND);
+// å¤‡æ³¨ä¿¡æ¯     è‡ªåŠ¨åˆ†é…ID
 //--------------------------------------------------------------------------------------------------
 uint8 wifi_spi_connect_udp_client (char *ip, char *port, char *local_port, wifi_spi_transfer_mode_enum mode)
 {
     char temp[64];
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer();                                            // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer();                                            // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     do
     {
         if(wifi_spi_set_connect_model("0"))
@@ -998,7 +998,7 @@ uint8 wifi_spi_connect_udp_client (char *ip, char *port, char *local_port, wifi_
             break;
         }
 
-        wifi_spi_clear_receive_buffer();                                        // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+        wifi_spi_clear_receive_buffer();                                        // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
         
         sprintf(temp, "AT+CIPSTARTEX=\"UDP\",\"%s\",%s,%s\r\n", ip, port, local_port);
         wifi_spi_send_command(temp);
@@ -1010,15 +1010,15 @@ uint8 wifi_spi_connect_udp_client (char *ip, char *port, char *local_port, wifi_
             break;
         }
 
-        wifi_spi_clear_receive_buffer();                                       // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
-        if(wifi_spi_set_transfer_model(WIFI_SPI_COMMAND == mode ? "0" : "1"))  // ÉèÖÃ´«ÊäÄ£Ê½
+        wifi_spi_clear_receive_buffer();                                       // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
+        if(wifi_spi_set_transfer_model(WIFI_SPI_COMMAND == mode ? "0" : "1"))  // è®¾ç½®ä¼ è¾“æ¨¡å¼
         {
             return_state = 1;
             break;
         }
 
-        wifi_spi_clear_receive_buffer();                                        // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
-        if(WIFI_SPI_SERIANET == mode)                                           // Í¸´«Ä£Ê½ÏÂÖ±½Ó¿ªÆôÍ¸´«
+        wifi_spi_clear_receive_buffer();                                        // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
+        if(WIFI_SPI_SERIANET == mode)                                           // é€ä¼ æ¨¡å¼ä¸‹ç›´æ¥å¼€å¯é€ä¼ 
         {
             if(wifi_spi_entry_serianet())
             {
@@ -1032,23 +1032,23 @@ uint8 wifi_spi_connect_udp_client (char *ip, char *port, char *local_port, wifi_
         wifi_spi_information.connect_mode  = WIFI_SPI_UDP_CLIENT;
         wifi_spi_information.transfer_mode = mode;
     }while(0);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     ¶Ï¿ªÁ¬½Ó TCP Server Ê¹ÓÃ±¾½Ó¿Ú½«»á¶Ï¿ªËùÓĞÁ¬½Ó
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     uint8           0£º³É¹¦   1£ºÊ§°Ü
-// Ê¹ÓÃÊ¾Àı     wifi_spi_disconnect_link();
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     æ–­å¼€è¿æ¥ TCP Server ä½¿ç”¨æœ¬æ¥å£å°†ä¼šæ–­å¼€æ‰€æœ‰è¿æ¥
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     uint8           0ï¼šæˆåŠŸ   1ï¼šå¤±è´¥
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_disconnect_link();
+// å¤‡æ³¨ä¿¡æ¯     
 //--------------------------------------------------------------------------------------------------
 uint8 wifi_spi_disconnect_link (void)
 {
     uint8 return_state = 0;
 
-    wifi_spi_clear_receive_buffer();                                           // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer();                                           // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
     do
     {
         if(WIFI_SPI_TCP_SERVER == wifi_spi_information.connect_mode)
@@ -1067,17 +1067,17 @@ uint8 wifi_spi_disconnect_link (void)
             break;
         }
     }while(0);
-    wifi_spi_clear_receive_buffer(); // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+    wifi_spi_clear_receive_buffer(); // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
 
     return return_state;
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     WiFiÄ£¿é ·¢ËÍ×Ö½Úº¯Êı
-// ²ÎÊıËµÃ÷     data            ĞèÒª·¢ËÍµÄÊı¾İ
-// ·µ»Ø²ÎÊı     uint32          Ê£ÓàÎ´·¢ËÍÊı¾İ³¤¶È
-// Ê¹ÓÃÊ¾Àı     wifi_spi_send_byte(0xa5);
-// ±¸×¢ĞÅÏ¢     µ±Ä£¿é×÷ÎªTCP·şÎñÆ÷Ê±£¬·¢ËÍÊı¾İº¯ÊıÄ¬ÈÏ½«Êı¾İ·¢ËÍÖÁµÚÒ»¸öÁ¬½ÓÄ£¿éµÄ¿Í»§¶Ë
+// å‡½æ•°ç®€ä»‹     WiFiæ¨¡å— å‘é€å­—èŠ‚å‡½æ•°
+// å‚æ•°è¯´æ˜     data            éœ€è¦å‘é€çš„æ•°æ®
+// è¿”å›å‚æ•°     uint32          å‰©ä½™æœªå‘é€æ•°æ®é•¿åº¦
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_send_byte(0xa5);
+// å¤‡æ³¨ä¿¡æ¯     å½“æ¨¡å—ä½œä¸ºTCPæœåŠ¡å™¨æ—¶ï¼Œå‘é€æ•°æ®å‡½æ•°é»˜è®¤å°†æ•°æ®å‘é€è‡³ç¬¬ä¸€ä¸ªè¿æ¥æ¨¡å—çš„å®¢æˆ·ç«¯
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wifi_spi_send_byte (uint8 data)
 {
@@ -1092,7 +1092,7 @@ uint32 wifi_spi_send_byte (uint8 data)
         {
             if(WIFI_SPI_COMMAND == wifi_spi_information.transfer_mode)
             {
-                wifi_spi_clear_receive_buffer();                                   // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                wifi_spi_clear_receive_buffer();                                   // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
                 temp_length = (uint8)sprintf(temp, "AT+CIPSEND=");
 
                 if(WIFI_SPI_TCP_SERVER == wifi_spi_information.connect_mode)
@@ -1103,16 +1103,16 @@ uint32 wifi_spi_send_byte (uint8 data)
                 temp_length += sprintf(&temp[temp_length], "%u\r\n", send_length);
 
                 wifi_spi_send_command(temp);
-                if(0 == wifi_spi_wait_ack("OK", WAIT_TIME_OUT))                    // µÈ´ıÄ£¿éÏìÓ¦
+                if(0 == wifi_spi_wait_ack("OK", WAIT_TIME_OUT))                    // ç­‰å¾…æ¨¡å—å“åº”
                 {
-                    wifi_spi_clear_receive_buffer();                               // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                    wifi_spi_clear_receive_buffer();                               // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
                     wifi_spi_write_data(&data, send_length);
                     wifi_spi_wait_ack("bytes", 50);
-                    wifi_spi_clear_receive_buffer();                               // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                    wifi_spi_clear_receive_buffer();                               // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
                     wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
                 }
             
-                wifi_spi_clear_receive_buffer();                                           // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                wifi_spi_clear_receive_buffer();                                           // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
             }
             else
             {
@@ -1125,12 +1125,12 @@ uint32 wifi_spi_send_byte (uint8 data)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     WiFiÄ£¿é ·¢ËÍ»º³åÇøº¯Êı
-// ²ÎÊıËµÃ÷     buff            ĞèÒª·¢ËÍµÄÊı¾İµØÖ·
-// ²ÎÊıËµÃ÷     len             ·¢ËÍ³¤¶È
-// ·µ»Ø²ÎÊı     uint32          Ê£ÓàÎ´·¢ËÍÊı¾İ³¤¶È
-// Ê¹ÓÃÊ¾Àı     wifi_spi_send_buffer("123", 3);
-// ±¸×¢ĞÅÏ¢     µ±Ä£¿é×÷ÎªTCP·şÎñÆ÷Ê±£¬·¢ËÍÊı¾İº¯ÊıÄ¬ÈÏ½«Êı¾İ·¢ËÍÖÁµÚÒ»¸öÁ¬½ÓÄ£¿éµÄ¿Í»§¶Ë
+// å‡½æ•°ç®€ä»‹     WiFiæ¨¡å— å‘é€ç¼“å†²åŒºå‡½æ•°
+// å‚æ•°è¯´æ˜     buff            éœ€è¦å‘é€çš„æ•°æ®åœ°å€
+// å‚æ•°è¯´æ˜     len             å‘é€é•¿åº¦
+// è¿”å›å‚æ•°     uint32          å‰©ä½™æœªå‘é€æ•°æ®é•¿åº¦
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_send_buffer("123", 3);
+// å¤‡æ³¨ä¿¡æ¯     å½“æ¨¡å—ä½œä¸ºTCPæœåŠ¡å™¨æ—¶ï¼Œå‘é€æ•°æ®å‡½æ•°é»˜è®¤å°†æ•°æ®å‘é€è‡³ç¬¬ä¸€ä¸ªè¿æ¥æ¨¡å—çš„å®¢æˆ·ç«¯
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wifi_spi_send_buffer (const uint8 *buff, uint32 len)
 {
@@ -1153,7 +1153,7 @@ uint32 wifi_spi_send_buffer (const uint8 *buff, uint32 len)
                     }
                     len -= send_length;
 
-                    wifi_spi_clear_receive_buffer();                                   // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                    wifi_spi_clear_receive_buffer();                                   // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
                     temp_length = (uint8)sprintf(temp, "AT+CIPSEND=");
 
                     if(WIFI_SPI_TCP_SERVER == wifi_spi_information.connect_mode)
@@ -1164,18 +1164,18 @@ uint32 wifi_spi_send_buffer (const uint8 *buff, uint32 len)
                     temp_length += sprintf(&temp[temp_length], "%u\r\n", send_length);
 
                     wifi_spi_send_command(temp);
-                    if(0 == wifi_spi_wait_ack("OK", WAIT_TIME_OUT))                    // µÈ´ıÄ£¿éÏìÓ¦
+                    if(0 == wifi_spi_wait_ack("OK", WAIT_TIME_OUT))                    // ç­‰å¾…æ¨¡å—å“åº”
                     {
-                        wifi_spi_clear_receive_buffer();                               // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                        wifi_spi_clear_receive_buffer();                               // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
                         wifi_spi_write_data(buff, send_length);
                         wifi_spi_wait_ack("bytes", 50);
-                        wifi_spi_clear_receive_buffer();                               // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                        wifi_spi_clear_receive_buffer();                               // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
                         wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
                     }
                     buff += send_length;
                 }
                 
-                wifi_spi_clear_receive_buffer();                                           // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                wifi_spi_clear_receive_buffer();                                           // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
             }
             else
             {
@@ -1188,11 +1188,11 @@ uint32 wifi_spi_send_buffer (const uint8 *buff, uint32 len)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     WiFiÄ£¿é ·¢ËÍ»º³åÇøº¯Êı(¶à¸öÔ´µØÖ·)
-//  ²ÎÊıËµÃ÷      *multi_buffer   ¶à¸öÔ´µØÖ·ÒÔ¼°Ã¿¸öÔ´µØÖ·ĞèÒª·¢ËÍµÄ³¤¶È
-// ·µ»Ø²ÎÊı     uint32          Ê£ÓàÎ´·¢ËÍÊı¾İ³¤¶È
-// Ê¹ÓÃÊ¾Àı     
-// ±¸×¢ĞÅÏ¢     ĞèÒª·¢ËÍ¶à¸öÊı×éÊ±£¬²ÉÓÃ´Ëº¯Êı¿ÉÒÔ¼«´óµÄ½µµÍÍ¨Ñ¶Ê±¼ä£¬·¢ËÍÊı¾İ×Ü³¤¶È²»ÄÜ³¬¹ı4092
+// å‡½æ•°ç®€ä»‹     WiFiæ¨¡å— å‘é€ç¼“å†²åŒºå‡½æ•°(å¤šä¸ªæºåœ°å€)
+//  å‚æ•°è¯´æ˜      *multi_buffer   å¤šä¸ªæºåœ°å€ä»¥åŠæ¯ä¸ªæºåœ°å€éœ€è¦å‘é€çš„é•¿åº¦
+// è¿”å›å‚æ•°     uint32          å‰©ä½™æœªå‘é€æ•°æ®é•¿åº¦
+// ä½¿ç”¨ç¤ºä¾‹     
+// å¤‡æ³¨ä¿¡æ¯     éœ€è¦å‘é€å¤šä¸ªæ•°ç»„æ—¶ï¼Œé‡‡ç”¨æ­¤å‡½æ•°å¯ä»¥æå¤§çš„é™ä½é€šè®¯æ—¶é—´ï¼Œå‘é€æ•°æ®æ€»é•¿åº¦ä¸èƒ½è¶…è¿‡4092
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wifi_spi_send_buffer_multi (wifi_spi_send_multi_struct *multi_buffer)
 {
@@ -1221,11 +1221,11 @@ uint32 wifi_spi_send_buffer_multi (wifi_spi_send_multi_struct *multi_buffer)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     WiFiÄ£¿é ·¢ËÍ×Ö·û´®º¯Êı
-// ²ÎÊıËµÃ÷     *str            ĞèÒª·¢ËÍµÄÊı¾İ
-// ·µ»Ø²ÎÊı     uint32          Ê£ÓàÎ´·¢ËÍÊı¾İ³¤¶È
-// Ê¹ÓÃÊ¾Àı     wifi_spi_send_string("123");
-// ±¸×¢ĞÅÏ¢     µ±Ä£¿é×÷ÎªTCP·şÎñÆ÷Ê±£¬·¢ËÍÊı¾İº¯ÊıÄ¬ÈÏ½«Êı¾İ·¢ËÍÖÁµÚÒ»¸öÁ¬½ÓÄ£¿éµÄ¿Í»§¶Ë
+// å‡½æ•°ç®€ä»‹     WiFiæ¨¡å— å‘é€å­—ç¬¦ä¸²å‡½æ•°
+// å‚æ•°è¯´æ˜     *str            éœ€è¦å‘é€çš„æ•°æ®
+// è¿”å›å‚æ•°     uint32          å‰©ä½™æœªå‘é€æ•°æ®é•¿åº¦
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_send_string("123");
+// å¤‡æ³¨ä¿¡æ¯     å½“æ¨¡å—ä½œä¸ºTCPæœåŠ¡å™¨æ—¶ï¼Œå‘é€æ•°æ®å‡½æ•°é»˜è®¤å°†æ•°æ®å‘é€è‡³ç¬¬ä¸€ä¸ªè¿æ¥æ¨¡å—çš„å®¢æˆ·ç«¯
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wifi_spi_send_string (const char *str)
 {
@@ -1240,7 +1240,7 @@ uint32 wifi_spi_send_string (const char *str)
         {
             if(WIFI_SPI_COMMAND == wifi_spi_information.transfer_mode)
             {
-                wifi_spi_clear_receive_buffer();                                   // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                wifi_spi_clear_receive_buffer();                                   // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
                 temp_length = (uint8)sprintf(temp, "AT+CIPSEND=");
 
                 if(WIFI_SPI_TCP_SERVER == wifi_spi_information.connect_mode)
@@ -1251,16 +1251,16 @@ uint32 wifi_spi_send_string (const char *str)
                 temp_length += sprintf(&temp[temp_length], "%u\r\n", send_length);
 
                 wifi_spi_send_command(temp);
-                if(0 == wifi_spi_wait_ack("OK", WAIT_TIME_OUT))                    // µÈ´ıÄ£¿éÏìÓ¦
+                if(0 == wifi_spi_wait_ack("OK", WAIT_TIME_OUT))                    // ç­‰å¾…æ¨¡å—å“åº”
                 {
-                    wifi_spi_clear_receive_buffer();                               // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                    wifi_spi_clear_receive_buffer();                               // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
                     wifi_spi_write_data((uint8 *)str, send_length);
                     wifi_spi_wait_ack("bytes", 50);
-                    wifi_spi_clear_receive_buffer();                               // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                    wifi_spi_clear_receive_buffer();                               // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
                     wifi_spi_wait_ack("OK", WAIT_TIME_OUT);
                 }
             
-                wifi_spi_clear_receive_buffer();                                           // Çå¿ÕWiFi½ÓÊÕ»º³åÇø
+                wifi_spi_clear_receive_buffer();                                           // æ¸…ç©ºWiFiæ¥æ”¶ç¼“å†²åŒº
             }
             else
             {
@@ -1273,12 +1273,12 @@ uint32 wifi_spi_send_string (const char *str)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     WiFi Ä£¿éÊı¾İ½ÓÊÕº¯Êı
-// ²ÎÊıËµÃ÷     buffer          ½ÓÊÕÊı¾İµÄ´æ·ÅµØÖ·
-// ²ÎÊıËµÃ÷     len             Êı×é³¤¶È£¬¿ÉÖ±½ÓÌîĞ´»òÕßÊ¹ÓÃsizeofÇóµÃ
-// ·µ»Ø²ÎÊı     uint32          ·µ»ØÊµ¼Ê½ÓÊÕµ½µÄÊı¾İ³¤¶È
-// Ê¹ÓÃÊ¾Àı     uint8 test_buffer[256]; wifi_spi_read_buffer(&test_buffer[0], sizeof(test_buffer));
-// ±¸×¢ĞÅÏ¢     
+// å‡½æ•°ç®€ä»‹     WiFi æ¨¡å—æ•°æ®æ¥æ”¶å‡½æ•°
+// å‚æ•°è¯´æ˜     buffer          æ¥æ”¶æ•°æ®çš„å­˜æ”¾åœ°å€
+// å‚æ•°è¯´æ˜     len             æ•°ç»„é•¿åº¦ï¼Œå¯ç›´æ¥å¡«å†™æˆ–è€…ä½¿ç”¨sizeofæ±‚å¾—
+// è¿”å›å‚æ•°     uint32          è¿”å›å®é™…æ¥æ”¶åˆ°çš„æ•°æ®é•¿åº¦
+// ä½¿ç”¨ç¤ºä¾‹     uint8 test_buffer[256]; wifi_spi_read_buffer(&test_buffer[0], sizeof(test_buffer));
+// å¤‡æ³¨ä¿¡æ¯     
 //-------------------------------------------------------------------------------------------------------------------
 uint32 wifi_spi_read_buffer (uint8 *buffer, uint32 len)
 {
@@ -1287,34 +1287,34 @@ uint32 wifi_spi_read_buffer (uint8 *buffer, uint32 len)
 }
 
 //--------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     wifi spi handshakeÖĞ¶Ï»Øµ÷º¯Êı
-// ²ÎÊıËµÃ÷     void
-// ·µ»Ø²ÎÊı     void          
-// ±¸×¢ĞÅÏ¢     ÄÚ²¿µ÷ÓÃ
+// å‡½æ•°ç®€ä»‹     wifi spi handshakeä¸­æ–­å›è°ƒå‡½æ•°
+// å‚æ•°è¯´æ˜     void
+// è¿”å›å‚æ•°     void          
+// å¤‡æ³¨ä¿¡æ¯     å†…éƒ¨è°ƒç”¨
 //--------------------------------------------------------------------------------------------------
 void wifi_spi_callback (void)
 {
     wifi_spi_check_state_read_buffer();
-    wifi_spi_ack_flag = 1;              // ACK±êÖ¾Î»ÖÃ1
+    wifi_spi_ack_flag = 1;              // ACKæ ‡å¿—ä½ç½®1
 }
 
 
 //-------------------------------------------------------------------------------------------------------------------
-// º¯Êı¼ò½é     WiFi Ä£¿é³õÊ¼»¯
-// ²ÎÊıËµÃ÷     *wifi_ssid      Ä¿±êÁ¬½ÓµÄ WiFi µÄÃû³Æ ×Ö·û´®ĞÎÊ½
-// ²ÎÊıËµÃ÷     *pass_word      Ä¿±êÁ¬½ÓµÄ WiFi µÄÃÜÂë ×Ö·û´®ĞÎÊ½
-// ²ÎÊıËµÃ÷     wifi_mode       Ä£¿éµÄ¹¤×÷Ä£Ê½ ²ÎÕÕ zf_device_wireless_spi.h ÖĞ wifi_spi_mode_enum Ã¶¾Ù
-// ·µ»Ø²ÎÊı     uint8           Ä£¿é³õÊ¼»¯×´Ì¬ 0-³É¹¦ 1-´íÎó
-// Ê¹ÓÃÊ¾Àı     wifi_spi_init("SEEKFREE_2.4G", "SEEKFREEV2", WIFI_UART_STATION);
-// ±¸×¢ĞÅÏ¢     ³õÊ¼»¯»áÊ×ÏÈÉèÖÃ´®¿ÚÅäÖÃ£¬Ö®ºó»á¶ÔÄ£¿é½øĞĞ»ù±¾²ÎÊıÅäÖÃ
-//              ¾ßÌåµÄÅäÖÃĞÅÏ¢¿ÉÒÔÔÚ zf_device_wireless_spi.h ÎÄ¼şÖĞĞŞ¸Ä
+// å‡½æ•°ç®€ä»‹     WiFi æ¨¡å—åˆå§‹åŒ–
+// å‚æ•°è¯´æ˜     *wifi_ssid      ç›®æ ‡è¿æ¥çš„ WiFi çš„åç§° å­—ç¬¦ä¸²å½¢å¼
+// å‚æ•°è¯´æ˜     *pass_word      ç›®æ ‡è¿æ¥çš„ WiFi çš„å¯†ç  å­—ç¬¦ä¸²å½¢å¼
+// å‚æ•°è¯´æ˜     wifi_mode       æ¨¡å—çš„å·¥ä½œæ¨¡å¼ å‚ç…§ zf_device_wireless_spi.h ä¸­ wifi_spi_mode_enum æšä¸¾
+// è¿”å›å‚æ•°     uint8           æ¨¡å—åˆå§‹åŒ–çŠ¶æ€ 0-æˆåŠŸ 1-é”™è¯¯
+// ä½¿ç”¨ç¤ºä¾‹     wifi_spi_init("SEEKFREE_2.4G", "SEEKFREEV2", WIFI_UART_STATION);
+// å¤‡æ³¨ä¿¡æ¯     åˆå§‹åŒ–ä¼šé¦–å…ˆè®¾ç½®ä¸²å£é…ç½®ï¼Œä¹‹åä¼šå¯¹æ¨¡å—è¿›è¡ŒåŸºæœ¬å‚æ•°é…ç½®
+//              å…·ä½“çš„é…ç½®ä¿¡æ¯å¯ä»¥åœ¨ zf_device_wireless_spi.h æ–‡ä»¶ä¸­ä¿®æ”¹
 //-------------------------------------------------------------------------------------------------------------------
 uint8 wifi_spi_init (char *wifi_ssid, char *pass_word, wifi_spi_mode_enum wifi_mode)
 {
     uint8 return_state = 0;
     uint32 temp_isr;
     
-    spi_init(WIFI_SPI_INDEX, SPI_MODE0, WIFI_SPI_SPEED, WIFI_SPI_SCK_PIN, WIFI_SPI_MOSI_PIN, WIFI_SPI_MISO_PIN, SPI_CS_NULL);//Ó²¼şSPI³õÊ¼»¯
+    spi_init(WIFI_SPI_INDEX, SPI_MODE0, WIFI_SPI_SPEED, WIFI_SPI_SCK_PIN, WIFI_SPI_MOSI_PIN, WIFI_SPI_MISO_PIN, SPI_CS_NULL);//ç¡¬ä»¶SPIåˆå§‹åŒ–
     set_wireless_type(WIFI_SPI, wifi_spi_callback);
     fifo_init(&wifi_spi_fifo, FIFO_DATA_8BIT, wifi_spi_buffer, WIFI_SPI_BUFFER_SIZE);
     
@@ -1335,49 +1335,49 @@ uint8 wifi_spi_init (char *wifi_ssid, char *pass_word, wifi_spi_mode_enum wifi_m
     interrupt_global_enable(temp_isr);
     do
     {
-        if(wifi_spi_echo_set("0"))                                             // ¹Ø±ÕÄ£¿é»ØĞ´
+        if(wifi_spi_echo_set("0"))                                             // å…³é—­æ¨¡å—å›å†™
         {
             zf_log(0, "exit echo failed");
             return_state = 1;
             break;
         }
         
-        if(wifi_spi_auto_connect_wifi("0"))                                    // ¹Ø±Õ×Ô¶¯Á¬½Ó
+        if(wifi_spi_auto_connect_wifi("0"))                                    // å…³é—­è‡ªåŠ¨è¿æ¥
         {
             zf_log(0, "close auto connect failed");
             return_state = 1;
             break;
         }
 
-        if(wifi_spi_set_model(wifi_mode))                                      // ÉèÖÃÔËĞĞÄ£Ê½
+        if(wifi_spi_set_model(wifi_mode))                                      // è®¾ç½®è¿è¡Œæ¨¡å¼
         {
             zf_log(0, "set run mode failed");
             return_state = 1;
             break;
         }
 
-        if(wifi_spi_close_sleep_model())                                        // ¹Ø±ÕË¯ÃßÄ£Ê½
+        if(wifi_spi_close_sleep_model())                                        // å…³é—­ç¡çœ æ¨¡å¼
         {
             zf_log(0, "set sleep mode failed");
             return_state = 1;
             break;
         }
 
-        if(wifi_spi_set_wifi((char *)wifi_ssid, (char *)pass_word))            // Á¬½Ó wifi »òÕß¿ªÆôÈÈµã
+        if(wifi_spi_set_wifi((char *)wifi_ssid, (char *)pass_word))            // è¿æ¥ wifi æˆ–è€…å¼€å¯çƒ­ç‚¹
         {
             zf_log(0, "wifi set failed");
             return_state = 1;
             break;
         }
 
-        if(wifi_spi_get_information())                                         // Ä£¿é»ù±¾²ÎÊı»ñÈ¡
+        if(wifi_spi_get_information())                                         // æ¨¡å—åŸºæœ¬å‚æ•°è·å–
         {
             zf_log(0, "get module information failed");
             return_state = 1;
             break;
         }
 #if WIFI_SPI_AUTO_CONNECT == 1
-        if(wifi_spi_connect_tcp_servers(WIFI_SPI_TARGET_IP, WIFI_SPI_TARGET_PORT, WIFI_SPI_SERIANET))                       // Á¬½ÓTCP·şÎñÆ÷
+        if(wifi_spi_connect_tcp_servers(WIFI_SPI_TARGET_IP, WIFI_SPI_TARGET_PORT, WIFI_SPI_SERIANET))                       // è¿æ¥TCPæœåŠ¡å™¨
         {
             zf_log(0, "connect TCP server failed");
             return_state = 1;
@@ -1385,14 +1385,14 @@ uint8 wifi_spi_init (char *wifi_ssid, char *pass_word, wifi_spi_mode_enum wifi_m
         }
 #endif
 #if WIFI_SPI_AUTO_CONNECT == 2
-        if(wifi_spi_connect_udp_client(WIFI_SPI_TARGET_IP, WIFI_SPI_TARGET_PORT, WIFI_SPI_LOCAL_PORT, WIFI_SPI_SERIANET))  // ½¨Á¢UDPÁ¬½Ó
+        if(wifi_spi_connect_udp_client(WIFI_SPI_TARGET_IP, WIFI_SPI_TARGET_PORT, WIFI_SPI_LOCAL_PORT, WIFI_SPI_SERIANET))  // å»ºç«‹UDPè¿æ¥
         {
             zf_log(0, "connect UDP server failed");
             return_state = 1;
             break;
         }
 #endif
-        // Ä£¿é³õÊ¼»¯³É¹¦
+        // æ¨¡å—åˆå§‹åŒ–æˆåŠŸ
         wifi_spi_init_flag = 1;
     }while(0);
     

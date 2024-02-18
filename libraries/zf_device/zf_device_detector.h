@@ -1,35 +1,35 @@
 /*********************************************************************************************************************
-* TC264 Opensourec Library ¼´£¨TC264 ¿ªÔ´¿â£©ÊÇÒ»¸ö»ùÓÚ¹Ù·½ SDK ½Ó¿ÚµÄµÚÈý·½¿ªÔ´¿â
-* Copyright (c) 2022 SEEKFREE Öð·É¿Æ¼¼
+* TC264 Opensourec Library å³ï¼ˆTC264 å¼€æºåº“ï¼‰æ˜¯ä¸€ä¸ªåŸºäºŽå®˜æ–¹ SDK æŽ¥å£çš„ç¬¬ä¸‰æ–¹å¼€æºåº“
+* Copyright (c) 2022 SEEKFREE é€é£žç§‘æŠ€
 *
-* ±¾ÎÄ¼þÊÇ TC264 ¿ªÔ´¿âµÄÒ»²¿·Ö
+* æœ¬æ–‡ä»¶æ˜¯ TC264 å¼€æºåº“çš„ä¸€éƒ¨åˆ†
 *
-* TC264 ¿ªÔ´¿â ÊÇÃâ·ÑÈí¼þ
-* Äú¿ÉÒÔ¸ù¾Ý×ÔÓÉÈí¼þ»ù½ð»á·¢²¼µÄ GPL£¨GNU General Public License£¬¼´ GNUÍ¨ÓÃ¹«¹²Ðí¿ÉÖ¤£©µÄÌõ¿î
-* ¼´ GPL µÄµÚ3°æ£¨¼´ GPL3.0£©»ò£¨ÄúÑ¡ÔñµÄ£©ÈÎºÎºóÀ´µÄ°æ±¾£¬ÖØÐÂ·¢²¼ºÍ/»òÐÞ¸ÄËü
+* TC264 å¼€æºåº“ æ˜¯å…è´¹è½¯ä»¶
+* æ‚¨å¯ä»¥æ ¹æ®è‡ªç”±è½¯ä»¶åŸºé‡‘ä¼šå‘å¸ƒçš„ GPLï¼ˆGNU General Public Licenseï¼Œå³ GNUé€šç”¨å…¬å…±è®¸å¯è¯ï¼‰çš„æ¡æ¬¾
+* å³ GPL çš„ç¬¬3ç‰ˆï¼ˆå³ GPL3.0ï¼‰æˆ–ï¼ˆæ‚¨é€‰æ‹©çš„ï¼‰ä»»ä½•åŽæ¥çš„ç‰ˆæœ¬ï¼Œé‡æ–°å‘å¸ƒå’Œ/æˆ–ä¿®æ”¹å®ƒ
 *
-* ±¾¿ªÔ´¿âµÄ·¢²¼ÊÇÏ£ÍûËüÄÜ·¢»Ó×÷ÓÃ£¬µ«²¢Î´¶ÔÆä×÷ÈÎºÎµÄ±£Ö¤
-* ÉõÖÁÃ»ÓÐÒþº¬µÄÊÊÏúÐÔ»òÊÊºÏÌØ¶¨ÓÃÍ¾µÄ±£Ö¤
-* ¸ü¶àÏ¸½ÚÇë²Î¼û GPL
+* æœ¬å¼€æºåº“çš„å‘å¸ƒæ˜¯å¸Œæœ›å®ƒèƒ½å‘æŒ¥ä½œç”¨ï¼Œä½†å¹¶æœªå¯¹å…¶ä½œä»»ä½•çš„ä¿è¯
+* ç”šè‡³æ²¡æœ‰éšå«çš„é€‚é”€æ€§æˆ–é€‚åˆç‰¹å®šç”¨é€”çš„ä¿è¯
+* æ›´å¤šç»†èŠ‚è¯·å‚è§ GPL
 *
-* ÄúÓ¦¸ÃÔÚÊÕµ½±¾¿ªÔ´¿âµÄÍ¬Ê±ÊÕµ½Ò»·Ý GPL µÄ¸±±¾
-* Èç¹ûÃ»ÓÐ£¬Çë²ÎÔÄ<https://www.gnu.org/licenses/>
+* æ‚¨åº”è¯¥åœ¨æ”¶åˆ°æœ¬å¼€æºåº“çš„åŒæ—¶æ”¶åˆ°ä¸€ä»½ GPL çš„å‰¯æœ¬
+* å¦‚æžœæ²¡æœ‰ï¼Œè¯·å‚é˜…<https://www.gnu.org/licenses/>
 *
-* ¶îÍâ×¢Ã÷£º
-* ±¾¿ªÔ´¿âÊ¹ÓÃ GPL3.0 ¿ªÔ´Ðí¿ÉÖ¤Ð­Òé ÒÔÉÏÐí¿ÉÉêÃ÷ÎªÒëÎÄ°æ±¾
-* Ðí¿ÉÉêÃ÷Ó¢ÎÄ°æÔÚ libraries/doc ÎÄ¼þ¼ÐÏÂµÄ GPL3_permission_statement.txt ÎÄ¼þÖÐ
-* Ðí¿ÉÖ¤¸±±¾ÔÚ libraries ÎÄ¼þ¼ÐÏÂ ¼´¸ÃÎÄ¼þ¼ÐÏÂµÄ LICENSE ÎÄ¼þ
-* »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌÐò µ«ÐÞ¸ÄÄÚÈÝÊ±±ØÐë±£ÁôÖð·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷£¨¼´±¾ÉùÃ÷£©
+* é¢å¤–æ³¨æ˜Žï¼š
+* æœ¬å¼€æºåº“ä½¿ç”¨ GPL3.0 å¼€æºè®¸å¯è¯åè®® ä»¥ä¸Šè®¸å¯ç”³æ˜Žä¸ºè¯‘æ–‡ç‰ˆæœ¬
+* è®¸å¯ç”³æ˜Žè‹±æ–‡ç‰ˆåœ¨ libraries/doc æ–‡ä»¶å¤¹ä¸‹çš„ GPL3_permission_statement.txt æ–‡ä»¶ä¸­
+* è®¸å¯è¯å‰¯æœ¬åœ¨ libraries æ–‡ä»¶å¤¹ä¸‹ å³è¯¥æ–‡ä»¶å¤¹ä¸‹çš„ LICENSE æ–‡ä»¶
+* æ¬¢è¿Žå„ä½ä½¿ç”¨å¹¶ä¼ æ’­æœ¬ç¨‹åº ä½†ä¿®æ”¹å†…å®¹æ—¶å¿…é¡»ä¿ç•™é€é£žç§‘æŠ€çš„ç‰ˆæƒå£°æ˜Žï¼ˆå³æœ¬å£°æ˜Žï¼‰
 *
-* ÎÄ¼þÃû³Æ          zf_device_detector
-* ¹«Ë¾Ãû³Æ          ³É¶¼Öð·É¿Æ¼¼ÓÐÏÞ¹«Ë¾
-* °æ±¾ÐÅÏ¢          ²é¿´ libraries/doc ÎÄ¼þ¼ÐÄÚ version ÎÄ¼þ °æ±¾ËµÃ÷
-* ¿ª·¢»·¾³          ADS v1.9.4
-* ÊÊÓÃÆ½Ì¨          TC264D
-* µêÆÌÁ´½Ó          https://seekfree.taobao.com/
+* æ–‡ä»¶åç§°          zf_device_detector
+* å…¬å¸åç§°          æˆéƒ½é€é£žç§‘æŠ€æœ‰é™å…¬å¸
+* ç‰ˆæœ¬ä¿¡æ¯          æŸ¥çœ‹ libraries/doc æ–‡ä»¶å¤¹å†… version æ–‡ä»¶ ç‰ˆæœ¬è¯´æ˜Ž
+* å¼€å‘çŽ¯å¢ƒ          ADS v1.9.4
+* é€‚ç”¨å¹³å°          TC264D
+* åº—é“ºé“¾æŽ¥          https://seekfree.taobao.com/
 *
-* ÐÞ¸Ä¼ÇÂ¼
-* ÈÕÆÚ              ×÷Õß                ±¸×¢
+* ä¿®æ”¹è®°å½•
+* æ—¥æœŸ              ä½œè€…                å¤‡æ³¨
 * 2023-05-27       pudding           first version
 ********************************************************************************************************************/
 
@@ -39,123 +39,123 @@
 #include "zf_common_typedef.h"
 #include "zf_common_debug.h"
 
-// ¶¨Òå½ÓÊÕFIFO´óÐ¡
+// å®šä¹‰æŽ¥æ”¶FIFOå¤§å°
 #define DETECTOR_BUFFER_SIZE             ( 0x40 )
 
-// ¶¨ÒåÊ¾²¨Æ÷µÄ×î´óÍ¨µÀÊýÁ¿
+// å®šä¹‰ç¤ºæ³¢å™¨çš„æœ€å¤§é€šé“æ•°é‡
 #define DETECTOR_SET_OSCILLOSCOPE_COUNT  ( 0x08 )
 
-// ¶¨Òå²ÎÊýµ÷ÊÔµÄ×î´óÍ¨µÀÊýÁ¿
+// å®šä¹‰å‚æ•°è°ƒè¯•çš„æœ€å¤§é€šé“æ•°é‡
 #define DETECTOR_SET_PARAMETR_COUNT      ( 0x08 )
 
-// ¶¨ÒåÍ¼Ïñ±ßÏß×î´óÊýÁ¿
+// å®šä¹‰å›¾åƒè¾¹çº¿æœ€å¤§æ•°é‡
 #define DETECTOR_CAMERA_MAX_BOUNDARY     ( 0x08 )
 
-// µ¥Æ¬»úÍùÉÏÎ»»ú·¢ËÍµÄÖ¡Í·
+// å•ç‰‡æœºå¾€ä¸Šä½æœºå‘é€çš„å¸§å¤´
 #define DETECTOR_SEND_HEAD               ( 0xAA )
 
-// ÉãÏñÍ·Àà
+// æ‘„åƒå¤´ç±»
 #define DETECTOR_CAMERA_FUNCTION         ( 0x02 ) 
 #define DETECTOR_CAMERA_DOT_FUNCTION     ( 0x03 ) 
 #define DETECTOR_CAMERA_OSCILLOSCOPE     ( 0x10 )
 
-// ÉÏÎ»»úÍùµ¥Æ¬»ú·¢ËÍµÄÖ¡Í·
+// ä¸Šä½æœºå¾€å•ç‰‡æœºå‘é€çš„å¸§å¤´
 #define DETECTOR_RECEIVE_HEAD            ( 0x55 )
 
-// ²ÎÊýÉèÖÃÀà
+// å‚æ•°è®¾ç½®ç±»
 #define DETECTOR_RECEIVE_SET_PARAMETER   ( 0x20 )
 
 
-// Êý¾Ý·¢ËÍÉè±¸Ã¶¾Ù
+// æ•°æ®å‘é€è®¾å¤‡æžšä¸¾
 typedef enum
 {
-    DETECTOR_DEBUG_UART,                            // µ÷ÊÔ´®¿Ú    Ê¹ÓÃµÄ´®¿ÚÓÉDEBUG_UART_INDEXºê¶¨ÒåÖ¸¶¨
-    DETECTOR_WIRELESS_UART,                         // ÎÞÏß×ª´®¿Ú
-    DETECTOR_CH9141,                                // 9141À¶ÑÀ
-    DETECTOR_WIFI_UART,                             // WIFI×ª´®¿Ú
-    DETECTOR_WIFI_SPI,                              // ¸ßËÙWIFI SPI
-    DETECTOR_CUSTOM,                                // ×Ô¶¨ÒåÍ¨Ñ¶·½Ê½ ÐèÒª×ÔÐÐdetector_custom_write_byteº¯ÊýÖÐÊµÏÖÊý¾Ý·¢ËÍ
+    DETECTOR_DEBUG_UART,                            // è°ƒè¯•ä¸²å£    ä½¿ç”¨çš„ä¸²å£ç”±DEBUG_UART_INDEXå®å®šä¹‰æŒ‡å®š
+    DETECTOR_WIRELESS_UART,                         // æ— çº¿è½¬ä¸²å£
+    DETECTOR_CH9141,                                // 9141è“ç‰™
+    DETECTOR_WIFI_UART,                             // WIFIè½¬ä¸²å£
+    DETECTOR_WIFI_SPI,                              // é«˜é€ŸWIFI SPI
+    DETECTOR_CUSTOM,                                // è‡ªå®šä¹‰é€šè®¯æ–¹å¼ éœ€è¦è‡ªè¡Œdetector_custom_write_byteå‡½æ•°ä¸­å®žçŽ°æ•°æ®å‘é€
 }detector_transfer_type_enum;
 
 
-// ÉãÏñÍ·ÀàÐÍÃ¶¾Ù
+// æ‘„åƒå¤´ç±»åž‹æžšä¸¾
 typedef enum
 {
-    // °´ÕÕÉãÏñÍ·ÐÍºÅ¶¨Òå
+    // æŒ‰ç…§æ‘„åƒå¤´åž‹å·å®šä¹‰
     DETECTOR_OV7725_BIN = 1,
     DETECTOR_MT9V03X,
     DETECTOR_SCC8660,
     
-    // °´ÕÕÍ¼ÏñÀàÐÍ¶¨Òå
+    // æŒ‰ç…§å›¾åƒç±»åž‹å®šä¹‰
     DETECTOR_BINARY = 1,
     DETECTOR_GRAY,
     DETECTOR_RGB565,
 }detector_image_type_enum;
 
-// ÉãÏñÍ·ÀàÐÍÃ¶¾Ù
+// æ‘„åƒå¤´ç±»åž‹æžšä¸¾
 typedef enum
 {
-    // °´ÕÕÉãÏñÍ·ÐÍºÅ¶¨Òå
-    X_BOUNDARY,     // ·¢ËÍµÄÍ¼ÏñÖÐ±ß½çÐÅÏ¢Ö»°üº¬X£¬Ò²¾ÍÊÇÖ»ÓÐºá×ø±êÐÅÏ¢£¬×Ý×ø±ê¸ù¾ÝÍ¼Ïñ¸ß¶ÈµÃµ½
-    Y_BOUNDARY,     // ·¢ËÍµÄÍ¼ÏñÖÐ±ß½çÐÅÏ¢Ö»°üº¬Y£¬Ò²¾ÍÊÇÖ»ÓÐ×Ý×ø±êÐÅÏ¢£¬ºá×ø±ê¸ù¾ÝÍ¼Ïñ¿í¶ÈµÃµ½£¬Í¨³£ºÜÉÙÓÐÕâÑùµÄÐèÇó
-    XY_BOUNDARY,    // ·¢ËÍµÄÍ¼ÏñÖÐ±ß½çÐÅÏ¢°üº¬XÓëY£¬ÕâÑù¿ÉÒÔÖ¸¶¨µãÔÚÈÎÒâÎ»ÖÃ£¬¾Í¿ÉÒÔ·½±ãÏÔÊ¾³ö»ØÍäµÄÐ§¹û
-    NO_BOUNDARY,    // ·¢ËÍµÄÍ¼ÏñÖÐÃ»ÓÐ±ßÏßÐÅÏ¢
+    // æŒ‰ç…§æ‘„åƒå¤´åž‹å·å®šä¹‰
+    X_BOUNDARY,     // å‘é€çš„å›¾åƒä¸­è¾¹ç•Œä¿¡æ¯åªåŒ…å«Xï¼Œä¹Ÿå°±æ˜¯åªæœ‰æ¨ªåæ ‡ä¿¡æ¯ï¼Œçºµåæ ‡æ ¹æ®å›¾åƒé«˜åº¦å¾—åˆ°
+    Y_BOUNDARY,     // å‘é€çš„å›¾åƒä¸­è¾¹ç•Œä¿¡æ¯åªåŒ…å«Yï¼Œä¹Ÿå°±æ˜¯åªæœ‰çºµåæ ‡ä¿¡æ¯ï¼Œæ¨ªåæ ‡æ ¹æ®å›¾åƒå®½åº¦å¾—åˆ°ï¼Œé€šå¸¸å¾ˆå°‘æœ‰è¿™æ ·çš„éœ€æ±‚
+    XY_BOUNDARY,    // å‘é€çš„å›¾åƒä¸­è¾¹ç•Œä¿¡æ¯åŒ…å«Xä¸ŽYï¼Œè¿™æ ·å¯ä»¥æŒ‡å®šç‚¹åœ¨ä»»æ„ä½ç½®ï¼Œå°±å¯ä»¥æ–¹ä¾¿æ˜¾ç¤ºå‡ºå›žå¼¯çš„æ•ˆæžœ
+    NO_BOUNDARY,    // å‘é€çš„å›¾åƒä¸­æ²¡æœ‰è¾¹çº¿ä¿¡æ¯
 }detector_boundary_type_enum;
 
 typedef struct
 {
-    uint8 head;                                     // Ö¡Í·
-    uint8 channel_num;                              // ¸ßËÄÎ»Îª¹¦ÄÜ×Ö  µÍËÄÎ»ÎªÍ¨µÀÊýÁ¿
-    uint8 check_sum;                                // ºÍÐ£Ñé
-    uint8 length;                                   // °ü³¤¶È
-    float data[DETECTOR_SET_OSCILLOSCOPE_COUNT];    // Í¨µÀÊý¾Ý
+    uint8 head;                                     // å¸§å¤´
+    uint8 channel_num;                              // é«˜å››ä½ä¸ºåŠŸèƒ½å­—  ä½Žå››ä½ä¸ºé€šé“æ•°é‡
+    uint8 check_sum;                                // å’Œæ ¡éªŒ
+    uint8 length;                                   // åŒ…é•¿åº¦
+    float data[DETECTOR_SET_OSCILLOSCOPE_COUNT];    // é€šé“æ•°æ®
 }detector_oscilloscope_struct;
 
 
 typedef struct
 {
-    uint8 head;                                     // Ö¡Í·
-    uint8 function;                                 // ¹¦ÄÜ×Ö
-    uint8 camera_type;                              // µÍËÄÎ»±íÊ¾±ß½çÊýÁ¿ µÚËÄÎ»±íÊ¾ÊÇ·ñÓÐÍ¼ÏñÊý¾Ý  ÀýÈç0x13£ºÆäÖÐ3±íÊ¾Ò»¸±Í¼ÏñÓÐÈýÌõ±ß½ç£¨Í¨³£ÊÇ×ó±ß½ç¡¢ÖÐÏß¡¢ÓÒ±ß½ç£©¡¢1±íÊ¾Ã»ÓÐÍ¼ÏñÊý¾Ý
-    uint8 length;                                   // °ü³¤¶È£¨½ö°üº¬Ð­Òé²¿·Ö£©
-    uint16 image_width;                             // Í¼Ïñ¿í¶È
-    uint16 image_height;                            // Í¼Ïñ¸ß¶È
+    uint8 head;                                     // å¸§å¤´
+    uint8 function;                                 // åŠŸèƒ½å­—
+    uint8 camera_type;                              // ä½Žå››ä½è¡¨ç¤ºè¾¹ç•Œæ•°é‡ ç¬¬å››ä½è¡¨ç¤ºæ˜¯å¦æœ‰å›¾åƒæ•°æ®  ä¾‹å¦‚0x13ï¼šå…¶ä¸­3è¡¨ç¤ºä¸€å‰¯å›¾åƒæœ‰ä¸‰æ¡è¾¹ç•Œï¼ˆé€šå¸¸æ˜¯å·¦è¾¹ç•Œã€ä¸­çº¿ã€å³è¾¹ç•Œï¼‰ã€1è¡¨ç¤ºæ²¡æœ‰å›¾åƒæ•°æ®
+    uint8 length;                                   // åŒ…é•¿åº¦ï¼ˆä»…åŒ…å«åè®®éƒ¨åˆ†ï¼‰
+    uint16 image_width;                             // å›¾åƒå®½åº¦
+    uint16 image_height;                            // å›¾åƒé«˜åº¦
 }detector_camera_struct;
 
 
 typedef struct
 {
-    uint8 head;                                     // Ö¡Í·
-    uint8 function;                                 // ¹¦ÄÜ×Ö
-    uint8 dot_type;                                 // µãÀàÐÍ  BIT5£º1£º×ø±êÊÇ16Î»µÄ 0£º×ø±êÊÇ8Î»µÄ    BIT7-BIT6£º0£ºÖ»ÓÐX×ø±ê 1£ºÖ»ÓÐY×ø±ê 2£ºXºÍY×ø±ê¶¼ÓÐ    BIT3-BIT0£º±ß½çÊýÁ¿
-    uint8 length;                                   // °ü³¤¶È£¨½ö°üº¬Ð­Òé²¿·Ö£©
-    uint16 dot_num;                                 // »­µãÊýÁ¿
-    uint8  valid_flag;                              // Í¨µÀ±êÊ¶ 
-    uint8  reserve;                                 // ±£Áô
+    uint8 head;                                     // å¸§å¤´
+    uint8 function;                                 // åŠŸèƒ½å­—
+    uint8 dot_type;                                 // ç‚¹ç±»åž‹  BIT5ï¼š1ï¼šåæ ‡æ˜¯16ä½çš„ 0ï¼šåæ ‡æ˜¯8ä½çš„    BIT7-BIT6ï¼š0ï¼šåªæœ‰Xåæ ‡ 1ï¼šåªæœ‰Yåæ ‡ 2ï¼šXå’ŒYåæ ‡éƒ½æœ‰    BIT3-BIT0ï¼šè¾¹ç•Œæ•°é‡
+    uint8 length;                                   // åŒ…é•¿åº¦ï¼ˆä»…åŒ…å«åè®®éƒ¨åˆ†ï¼‰
+    uint16 dot_num;                                 // ç”»ç‚¹æ•°é‡
+    uint8  valid_flag;                              // é€šé“æ ‡è¯† 
+    uint8  reserve;                                 // ä¿ç•™
 }detector_camera_dot_struct;
 
 typedef struct
 {
-    void *image_addr;                               // ÉãÏñÍ·µØÖ·
-    uint16 width;                                   // Í¼Ïñ¿í¶È
-    uint16 height;                                  // Í¼Ïñ¸ß¶È
-    detector_image_type_enum camera_type;           // ÉãÏñÍ·ÀàÐÍ
-    void *boundary_x[DETECTOR_CAMERA_MAX_BOUNDARY]; // ±ß½çºá×ø±êÊý×éµØÖ·
-    void *boundary_y[DETECTOR_CAMERA_MAX_BOUNDARY]; // ±ß½ç×Ý×ø±êÊý×éµØÖ·
+    void *image_addr;                               // æ‘„åƒå¤´åœ°å€
+    uint16 width;                                   // å›¾åƒå®½åº¦
+    uint16 height;                                  // å›¾åƒé«˜åº¦
+    detector_image_type_enum camera_type;           // æ‘„åƒå¤´ç±»åž‹
+    void *boundary_x[DETECTOR_CAMERA_MAX_BOUNDARY]; // è¾¹ç•Œæ¨ªåæ ‡æ•°ç»„åœ°å€
+    void *boundary_y[DETECTOR_CAMERA_MAX_BOUNDARY]; // è¾¹ç•Œçºµåæ ‡æ•°ç»„åœ°å€
 }detector_camera_buffer_struct;
 
 typedef struct
 {
-    uint8 head;                                     // Ö¡Í·
-    uint8 function;                                 // ¹¦ÄÜ×Ö
-    uint8 channel;                                  // Í¨µÀ
-    uint8 check_sum;                                // ºÍÐ£Ñé
-    float data;                                     // Êý¾Ý
+    uint8 head;                                     // å¸§å¤´
+    uint8 function;                                 // åŠŸèƒ½å­—
+    uint8 channel;                                  // é€šé“
+    uint8 check_sum;                                // å’Œæ ¡éªŒ
+    float data;                                     // æ•°æ®
 }detector_parameter_struct;
 
 
-extern detector_oscilloscope_struct                 detector_oscilloscope_data;                         // ÐéÄâÊ¾²¨Æ÷Êý¾Ý
-extern float                                        detector_parameter[DETECTOR_SET_PARAMETR_COUNT];    // ±£´æ½ÓÊÕµ½µÄ²ÎÊý
+extern detector_oscilloscope_struct                 detector_oscilloscope_data;                         // è™šæ‹Ÿç¤ºæ³¢å™¨æ•°æ®
+extern float                                        detector_parameter[DETECTOR_SET_PARAMETR_COUNT];    // ä¿å­˜æŽ¥æ”¶åˆ°çš„å‚æ•°
 
 
 void    detector_oscilloscope_send                  (detector_oscilloscope_struct *detector_oscilloscope);
