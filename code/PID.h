@@ -1,10 +1,3 @@
-/*
- * PID.h
- *
- *  Created on: 2022年4月20日
- *      Author: logX
- */
-
 #ifndef _PID_H_
 #define _PID_H_
 
@@ -31,8 +24,9 @@ typedef struct
 
 }_pid_param_t;
 
-
+/*
 float Incremental_PID(volatile _pid_param_t * pid_param, float error, float maxout);
 float Servo_PID(volatile _pid_param_t * pid_param, float maxout);
+*/
 
 #endif

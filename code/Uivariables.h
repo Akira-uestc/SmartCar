@@ -9,7 +9,7 @@ extern volatile int   Flag_Stop;
 extern volatile short  Flag_Garage_Out;
 extern volatile short  Flag_Garage_Turn_Dircection;
 
-/**********************************************************舵机***********************************************************/
+//舵机
 extern volatile short Ui_Servo_Mid;
 extern volatile short Ui_Servo_Interval;
 extern volatile float Ui_Steer_P;

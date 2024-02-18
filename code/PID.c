@@ -1,9 +1,3 @@
-/*
- * PID.c
- *
- *  Created on: 2022年4月20日
- *      Author: logX
- */
 #include <Function.h>
 #include <Variables.h>
 #include <Uivariables.h>
