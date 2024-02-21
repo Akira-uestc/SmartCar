@@ -9,7 +9,6 @@
 #include <zf_device_mt9v03x.h>
 #include <string.h>
 #include "Duty.h"
-#include "Uivariables.h"
 #include "zf_driver_uart.h"
 #include "zf_driver_timer.h"
 #include "Variables.h"
