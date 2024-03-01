@@ -5459,30 +5459,3 @@ void Get_MidlineErr(void)
             break;
         }
     }
-
-//    //算出丢中点数
-//    for (i = 59; i > 3; i--)
-//    {
-//        if (imageLine1.Exist_Center[i])
-//        {
-//            for (j = i; j > 3; j--)
-//            {
-//                if (imageLine1.Exist_Center[j])
-//                {
-//                    if (abs(imageLine1.Point_Center[j] - imageLine1.Point_Center[i]) < 5)
-//                    {
-//                        CenterPoint_Cnt++;
-//                    }
-//                }
-//                else
-//                    break;
-//            }
-//        }
-//        if (CenterPoint_Cnt != 0)
-//        {
-//            break;
-//        }
-//    }
-//    CenterPoint_Cnt = Constrain_Int(CenterPoint_Cnt, 5, 55) - 5;
-//    LoseCP_Cnt_f = (float)(50 - CenterPoint_Cnt);
-}
