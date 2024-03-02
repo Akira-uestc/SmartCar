@@ -1,6 +1,5 @@
 #include <ImageProcess.h>
 
-typedef unsigned char uint8;
 volatile imageLine_t imageLine;
 volatile imageLine_t imageLine1;
 static short stackTopPos; //栈顶指针
@@ -221,7 +220,7 @@ void mediumLineCheck(void)
 }
 
 /****************************************************数据传输***********************************************************************/
-/*图片信息输出*/
+/*图片信息输出
 void ImageInformationDisplay(void)
 {
     char txt[32];
@@ -235,18 +234,17 @@ void ImageInformationDisplay(void)
     sprintf(txt, "Mend=%d;", Flag_Left_Ring_Out_Mend);
     OLED_P6x8Str(0, 3, txt);
 }
-/*图传函数*/
+
+
+//图传函数
 void MasterComputerReport(void)
 {
-    if (Camera_BIN == 1)
+    if (mt9v03x_finish_flag == 1)
     {
         ZW_Send_Image(Bin_Image);
-        Camera_BIN = 0;
+        mt9v03x_finish_flag = 0;
     }
 }
-
-
-/*
 //串口传输
 void SendMessage(void)
 {
@@ -313,12 +311,12 @@ void ImageProcess_BIN(int i)
         /*计算阈值*/
         Threshold = (unsigned short)GetOSTU_ln(Image_Use);
         Binimage(Threshold);
-        Camera_BIN = 1;
+        mt9v03x_finish_flag = 1;
     }
     else
     {
         Get_Bin_Image(0);
-        Camera_BIN = 1;
+        mt9v03x_finish_flag = 1;
     }
     BinImageFilter();
 }
@@ -5459,3 +5457,4 @@ void Get_MidlineErr(void)
             break;
         }
     }
+}

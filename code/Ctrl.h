@@ -1,12 +1,5 @@
-/*
- * LT_Motor_Ctrl.h
- *
- *  Created on: 2022年4月20日
- *      Author: logX
- */
-
-#ifndef _LT_MOTOR_CTRL_H_
-#define _LT_MOTOR_CTRL_H_
+#ifndef _CTRL_H_
+#define _CTRL_H_
 
 #include "stdlib.h"
 #include "Platform_Types.h"

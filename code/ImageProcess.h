@@ -12,7 +12,10 @@
 #include "zf_driver_uart.h"
 #include "zf_driver_timer.h"
 #include "Variables.h"
+#include "camera.h"
 
+#define ImageH IMAGEH   /*!< 摄像头采集高度 */
+#define ImageW IMAGEW   /*!< 摄像头采集宽度 */
 
 #ifndef MIN
 #  define MIN(a,b)  ((a) > (b) ? (b) : (a))
@@ -21,8 +24,6 @@
 #ifndef MAX
 #  define MAX(a,b)  ((a) < (b) ? (b) : (a))
 #endif
-#define ImageH    60  /*!< OLED显示高度（用户使用）高度 */
-#define ImageW    94  /*!< OLED显示宽度（用户使用）宽度 */
 
 #define K_MAX_THRESHOLD         10                      //两有效点间最大斜率
 #define EFFECTIVE_ROW            3                      //定义图片最上层的有效行
@@ -63,17 +64,6 @@ typedef struct
 } imageLine_t;                 //图片数据结构体定义
 extern volatile imageLine_t imageLine;
 extern volatile imageLine_t imageLine1;
-
-//移植龙丘摄像头
-extern unsigned char Camera_BIN;
-#define LCDH    60  /*!< OLED显示高度（用户使用）高度 */
-#define LCDW    94  /*!< OLED显示宽度（用户使用）宽度 */
-/** 压缩后之后用于存放屏幕显示数据  */
-unsigned char Image_Use[LCDH][LCDW];
-
-/** 二值化后用于OLED显示的数据 */
-unsigned char Bin_Image[LCDH][LCDW];
-typedef unsigned short uint16;
 
 /*数据传输*/
 void ImageInformationDisplay(void);
