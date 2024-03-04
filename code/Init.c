@@ -127,7 +127,7 @@ void Steer_PID_Init(void)
 void Init_All(void)
 {
     //遥控器 上升沿触发中断
-    exti_init(ERU_CH5_REQ1_P15_8, EXTI_TRIGGER_RISING);
+    //exti_init(ERU_CH5_REQ1_P15_8, EXTI_TRIGGER_RISING);
     Motor_Init();
     Servo_Init();
     Encoder_Init();
